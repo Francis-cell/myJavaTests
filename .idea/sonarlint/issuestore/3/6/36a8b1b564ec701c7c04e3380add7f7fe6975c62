@@ -1,0 +1,9 @@
+
+]
+java:S2094"BRemove this empty class, write its code or make it an "interface".(Ã¤úùÿÿÿÿ
+R
+java:S1854"<Remove this useless assignment to local variable "myTest04".( Ùñ¼
+C
+java:S1481"-Remove this unused "myTest04" local variable.( Ùñ¼
+V	java:S125"<This block of commented-out lines of code should be removed.(äè¯‹ıÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(“Á”Ú
