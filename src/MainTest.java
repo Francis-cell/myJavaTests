@@ -1,5 +1,9 @@
 import dateGetTests.DateGetMethods;
-import utils.BaseChangesUtils;
+import javaMailTests.javaMailUtils.SendMailUtils;
+import utils.arithmeticUtils.ArithmeticUtils;
+import utils.baseChanges.BaseChangesUtils;
+
+import java.math.BigDecimal;
 
 /**
  * @ClassName MainTest
@@ -48,83 +52,152 @@ public class MainTest {
      * @return void
      */
     public void baseTest() {
-        BaseChangesUtils baseChangesUtils = new BaseChangesUtils();
         //int i = baseChanges.xPowerNBinary(3, 5);
         //int j = baseChanges.xPowerNRecursion(3, 5);
         String hexNum = "0X123";
         //String hexNum = "0xAC45";
-        String str = baseChangesUtils.hexToDecimal(hexNum);
+        String str = BaseChangesUtils.hexToDecimal(hexNum);
         System.out.println(str);
 
         String decimalNum1 = "1000";
-        String str1 = baseChangesUtils.decimalToHex(decimalNum1);
+        String str1 = BaseChangesUtils.decimalToHex(decimalNum1);
         System.out.println(str1);
 
         //String decimalNum2 = "4";
-        //String str2 = baseChangesUtils.decimalToBinary(decimalNum2);
+        //String str2 = BaseChangesUtils.decimalToBinary(decimalNum2);
         //System.out.println(str2);
 
         String hexNums = "0X6C49";
         //String decimalTempStr = baseChanges.hexToDecimal(hexNums);
         //String lastValues = baseChanges.decimalToBinary(decimalTempStr);
-        String lastValues = baseChangesUtils.hexToBinary(hexNums, true);
+        String lastValues = BaseChangesUtils.hexToBinary(hexNums, true);
         System.out.println("最终的值为：" + lastValues);
 
         // 二进制数据转换成十六进制数据
         String binaryNum = "110110011011010111";
-        String hexStr = baseChangesUtils.binaryToHex(binaryNum);
+        String hexStr = BaseChangesUtils.binaryToHex(binaryNum);
         System.out.println(hexStr);
 
         // 二进制--》十进制
         System.out.println("二进制--》十进制");
-        System.out.println(baseChangesUtils.binaryToDecimal("11110010101010111"));
-        System.out.println(baseChangesUtils.binaryToDecimal("0x235"));
+        System.out.println(BaseChangesUtils.binaryToDecimal("11110010101010111"));
+        System.out.println(BaseChangesUtils.binaryToDecimal("0x235"));
 
-        // 十进制--》二进制
+        // 十进制--》二进制（浮点数操作）
         System.out.println("十进制--》二进制");
-        System.out.println(baseChangesUtils.decimalToBinary("10"));
-        System.out.println(baseChangesUtils.decimalToBinary("0x1234"));
+        System.out.println(BaseChangesUtils.decimalToBinary("1.4", 10));
+        System.out.println(BaseChangesUtils.decimalToBinary("1.125", 10));
+        System.out.println(BaseChangesUtils.decimalToBinary("100.125", 10));
+        System.out.println(BaseChangesUtils.decimalToBinary("0.125", 10));
+        System.out.println(BaseChangesUtils.decimalToBinary("0.4", 10));
+        System.out.println(BaseChangesUtils.decimalToBinary("1.xxx", 10));
 
         // 十进制--》十六进制
         int a=10;
         String a1 = String.valueOf(a);
         System.out.println("十进制--》十六进制");
-        System.out.println(baseChangesUtils.decimalToHex("10"));
-        System.out.println(baseChangesUtils.decimalToHex("0x12345"));
+        System.out.println(BaseChangesUtils.decimalToHex("10"));
+        System.out.println(BaseChangesUtils.decimalToHex("0x12345"));
 
         // 十六进制--》十进制
         System.out.println("十六进制--》十进制");
-        System.out.println(baseChangesUtils.hexToDecimal("0xABCD"));
-        System.out.println(baseChangesUtils.hexToDecimal("ABCD"));
-        System.out.println(baseChangesUtils.hexToDecimal("1234"));
+        System.out.println(BaseChangesUtils.hexToDecimal("0xABCD"));
+        System.out.println(BaseChangesUtils.hexToDecimal("ABCD"));
+        System.out.println(BaseChangesUtils.hexToDecimal("1234"));
 
 
         // 十六进制--》二进制
         System.out.println("十六进制--》二进制");
-        System.out.println(baseChangesUtils.hexToBinary("0xABCD", false));
-        System.out.println(baseChangesUtils.hexToDecimal("ABCD"));
-        System.out.println(baseChangesUtils.hexToDecimal("1234"));
+        System.out.println(BaseChangesUtils.hexToBinary("0xABCD", false));
+        System.out.println(BaseChangesUtils.hexToDecimal("ABCD"));
+        System.out.println(BaseChangesUtils.hexToDecimal("1234"));
 
         // 二进制--》十六进制
         System.out.println("二进制--》十六进制");
-        System.out.println(baseChangesUtils.binaryToHex("1010101111001101"));
-        System.out.println(baseChangesUtils.binaryToHex("0x1245"));
-        System.out.println(baseChangesUtils.binaryToHex("1245"));
+        System.out.println(BaseChangesUtils.binaryToHex("1010101111001101"));
+        System.out.println(BaseChangesUtils.binaryToHex("0x1245"));
+        System.out.println(BaseChangesUtils.binaryToHex("1245"));
 
 
         // 2的3次方
-        System.out.println(baseChangesUtils.xPowerNRecursion(2,3));
-        System.out.println(baseChangesUtils.xPowerNBinarys(2, 3));
+        System.out.println(BaseChangesUtils.xPowerNRecursion(2,3));
+        System.out.println(BaseChangesUtils.xPowerNBinary(2, 3));
 
-        System.out.println(baseChangesUtils.hexToDecimal("0xabcd"));
-        System.out.println(baseChangesUtils.binaryToDecimal("0xabcd"));
+        System.out.println(BaseChangesUtils.hexToDecimal("0xabcd"));
+        System.out.println(BaseChangesUtils.binaryToDecimal("0xabcd"));
+
+
+        // 二进制转换十进制数据
+        System.out.println(BaseChangesUtils.binaryToDecimal("11101011", true));
+        System.out.println(BaseChangesUtils.binaryToDecimal("01101011", true));
+        System.out.println(BaseChangesUtils.binaryToDecimal("11101011", false));
+    }
+
+    /**
+     * 高精度运算测试
+     * @return void
+     */
+    public void mathTest() {
+        //ArithmeticUtils ath = new ArithmeticUtils();
+        System.out.println("加法测试");
+        System.out.println(ArithmeticUtils.add(0.2, 0.23));
+        System.out.println(ArithmeticUtils.add("0.2", "0.23"));
+        System.out.println(ArithmeticUtils.add("0.2", "0.23", 1));
+
+        System.out.println("减法测试");
+        System.out.println(ArithmeticUtils.sub(0.2, 0.1));
+        System.out.println(ArithmeticUtils.sub("0.2", "0.1"));
+        System.out.println(ArithmeticUtils.sub("0.2", "0.11", 2));
+
+        System.out.println("乘法测试");
+        System.out.println(ArithmeticUtils.mul(0.2, 0.1));
+        System.out.println(ArithmeticUtils.mul("0.2", "0.1"));
+        // 结果：0.02
+        System.out.println(ArithmeticUtils.mul(0.2, 0.1, 3));
+        // 结果：0.020
+        System.out.println(ArithmeticUtils.mul("0.2", "0.1", 3));
+
+        System.out.println("除法测试");
+        //System.out.println(ArithmeticUtils.div(0.2, 0.1));
+        // 结果：2.0
+        System.out.println(ArithmeticUtils.div(0.2, 0.1, 2));
+        System.out.println(2.00);
+        // 结果：2.00
+        //System.out.println(ArithmeticUtils.div("0.2", "0.1", 2));
+
+        System.out.println("取余测试");
+        // 结果：0.20
+        System.out.println(ArithmeticUtils.remainder("1.2", "0.5", 2));
+        // 结果：0.20
+        System.out.println(ArithmeticUtils.remainder(new BigDecimal(1.2), new BigDecimal(0.5), 2));
+
+        System.out.println("比大小测试");
+        System.out.println(ArithmeticUtils.compare("0.2", "0.1"));
+        System.out.println(ArithmeticUtils.compare("0.2", "0.3"));
+        System.out.println(ArithmeticUtils.compare("0.2", "0.2"));
+    }
+
+    /**
+     *
+     * @return void
+     */
+    public void sendMailTest() {
+        //SendMailUtils.createEmail();
+        SendMailUtils.sendEmail();
     }
 
     public static void main(String[] args) {
         MainTest mainTest = new MainTest();
         // 进制转换测试
         mainTest.baseTest();
+
         // 时间输出测试
         //mainTest.timeTest();
+
+        // 高精度数学运算测试
+        //mainTest.mathTest();
+
+        // 邮件发送测试
+        //mainTest.sendMailTest();
     }
 }

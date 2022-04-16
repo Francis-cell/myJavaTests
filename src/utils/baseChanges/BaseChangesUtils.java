@@ -1,4 +1,4 @@
-package utils;
+package utils.baseChanges;
 
 import java.util.HashMap;
 
@@ -11,11 +11,18 @@ import java.util.HashMap;
  * @Version 1.0
  **/
 public class BaseChangesUtils {
+    /** 默认十进制转换二进制时小数位保留的最大位数 */
+    public static final int DIGIT = 5;
+
+    /** 默认二进制转十进制无符号位 */
+    public static final boolean SIGN = false;
+
+
     /**
      * 二进制数据转换成十六进制数据
      * @return String
      */
-    public String binaryToHex(String binaryNum) {
+    public static String binaryToHex(String binaryNum) {
 
         String result = "";
         // 首先检验传入的数据是否为二进制数据
@@ -80,7 +87,7 @@ public class BaseChangesUtils {
      * 十六进制数据转换成二进制数据(当man为true的时候为人性化显示)
      * @return String
      */
-    public String hexToBinary(String hexNum, Boolean man) {
+    public static String hexToBinary(String hexNum, Boolean man) {
         // 首先将十六进制有效数据转换成一个字符串数组
         String result = "";
         // 首先判断一个字符串数据是否是十六进制的数据
@@ -121,7 +128,7 @@ public class BaseChangesUtils {
      * 十六进制数据转换成十进制数据
      * @return String
      */
-    public String hexToDecimal(String hexNum) {
+    public static String hexToDecimal(String hexNum) {
         String result = "";
         // 首先判断一个字符串数据是否是十六进制的数据
         // 将整个String中的字母全部转换成大写字母
@@ -168,10 +175,10 @@ public class BaseChangesUtils {
 
 
     /**
-     * 十进制转换成十六进制数据
+     * 十进制转换成十六进制数据(int类型的十进制数据)
      * @return String
      */
-    public String decimalToHex(String decimalNum) {
+    public static String decimalToHex(String decimalNum) {
         String result = "";
         // 首先检验这个十进制的数字是否是一个数字
         try {
@@ -208,28 +215,106 @@ public class BaseChangesUtils {
         return result;
     }
 
-
     /**
-     * 十进制转换成二进制数据
+     * 十进制转换成二进制数据(初始方法)
      * @return String
      */
-    public String decimalToBinary(String decimalNum) {
+    public static String decimalToBinary(String decimalNum) {
+        return decimalToBinary(decimalNum, DIGIT);
+    }
+
+    /**
+     * 十进制转换成二进制数据(初始方法)
+     * @return String
+     */
+    public static String decimalToBinary(String decimalNum, int digit) {
         String result = "";
         // 首先检验这个十进制的数字是否是一个数字
-        try {
-            int flag = Integer.parseInt(decimalNum);
-        } catch (NumberFormatException e) {
-            result = "False";
+        // 如果是整型数据，则使用Integer.parseInt()进行检验
+        if (!decimalNum.contains(".")) {
+            try {
+                int flag = Integer.parseInt(decimalNum);
+            } catch (NumberFormatException e) {
+                result = "False";
+                return result;
+            }
+            // 将这个String类型的decimalNum转换成数字
+            int decimalNumInt = Integer.parseInt(decimalNum);
+            return decimalToBinaryIntPart(decimalNumInt);
+        }
+        // 如果传入的可能是double型的数据，首先检验是否是一个数据
+        else {
+            try {
+                double flag = Double.parseDouble(decimalNum);
+            } catch (NumberFormatException e) {
+                result = "False";
+                return result;
+            }
+            // 将这个String类型的数据转换成double类型的数据
+            // 首先将数据划分成整数部分和小数部分，分开处理
+            int decimalNumInt = Integer.parseInt(decimalNum.split("\\.")[0]);
+            double decimalNumDouble = Double.parseDouble("0." + decimalNum.split("\\.")[1]);
+            // 整数部分的处理
+            String intPartResult = decimalToBinaryIntPart(decimalNumInt);
+            // 小数部分的处理
+            String doublePartResult = decimalToBinaryDoublePart(decimalNumDouble, digit);
+            // 将小数部分的数据和整数部分的数据进行拼接处理
+            result = intPartResult + "." + doublePartResult.split("\\.")[1];
             return result;
         }
-        // 将这个String类型的decimalNum转换成数字
-        int decimalNumInt = Integer.parseInt(decimalNum);
-        while (decimalNumInt / 2 > 0) {
-            result += (decimalNumInt % 2) + "";
-            decimalNumInt /= 2;
+
+    }
+
+    /**
+     * 十进制数据转换二进制数据（整数部分的处理）
+     * @return String
+     */
+    public static String decimalToBinaryIntPart(int decimalNum) {
+        String result = "";
+        if (decimalNum == 0 || decimalNum == 1) {
+            return decimalNum == 0 ? "0" : "1";
         }
-        result += decimalNumInt;
+        while (decimalNum / 2 > 0) {
+            result += (decimalNum % 2) + "";
+            decimalNum /= 2;
+        }
+        result += decimalNum;
         result = new StringBuffer(result).reverse().toString();
+        return result;
+    }
+
+    /**
+     * 十进制数据转换二进制数据（小数部分的处理）
+     * @return String
+     */
+    public static String decimalToBinaryDoublePart(double decimalNum, int digit) {
+        String result = "";
+        // 因为这里的数据对double数据的要求为0.XXX，所以不满足条件的直接返回false即可(针对直接调用这个方法的)
+        if (!Double.toString(decimalNum).split("\\.")[0].equals("0")) {
+            return "False";
+        }
+        if (decimalNum == 0.0) {
+            return "0.0";
+        }
+        // digit: 小数部分最多保留的位数
+        // 这里的条件判断的是，浮点数的小数部分*2之后的小数位是否为0，如果为0，则结束
+        while (!Double.toString(decimalNum * 2).split("\\.")[1].equals("0")) {
+            // 将浮点数的小数位*2的整数位取出，然后提前放置到结果集中
+            result += Double.toString(decimalNum * 2).split("\\.")[0];
+            String temp = "0." + Double.toString(decimalNum * 2).split("\\.")[1];
+            decimalNum = Double.parseDouble(temp);
+            // 标志位生效
+            digit--;
+            if (digit == 0) {
+                break;
+            }
+        }
+        // 判断最后decimalNum的值是否是0.0，如果是0.0，则result的需要再添加一位1
+        if (decimalNum == 0.5) {
+            result += "1";
+        }
+        // 最终的结果为前面的result反转之后再在前面添加上"0."的字符串的值
+        result = "0." + result;
         return result;
     }
 
@@ -237,7 +322,15 @@ public class BaseChangesUtils {
      * 二进制数据转换成十进制数据
      * @return String
      */
-    public String binaryToDecimal(String binaryNum) {
+    public static String binaryToDecimal(String binaryNum) {
+        return binaryToDecimal(binaryNum, SIGN);
+    }
+
+    /**
+     * 二进制数据转换成十进制数据(初始方法)
+     * @return String
+     */
+    public static String binaryToDecimal(String binaryNum, boolean sign) {
         String result = "";
         // 首先检验是否是二进制数据
         String[] binaryNumArr = binaryNum.split("");
@@ -251,6 +344,24 @@ public class BaseChangesUtils {
             tempLen--;
         }
 
+        // 无符号位的二进制转换
+        if (sign == false) {
+            return binaryToDecimalUnsigned(binaryNum);
+        }
+        // 有符号位的二进制转换
+        else {
+            return binaryToDecimalSigned(binaryNum);
+        }
+
+    }
+
+    /**
+     * 无符号二进制数据转换成十进制数据
+     * @return String
+     */
+    public static String binaryToDecimalUnsigned(String binaryNum) {
+        String result = "";
+        String[] binaryNumArr = binaryNum.split("");
         int tempResult = 0;
         // 从二进制的最高位开始，逆着将值*2的n次方
         for (int i = binaryNumArr.length - 1; i >= 0; i--) {
@@ -262,12 +373,48 @@ public class BaseChangesUtils {
         return result;
     }
 
+    /**
+     * 有符号二进制数据转换成十进制数据
+     * @return String
+     */
+    public static String binaryToDecimalSigned(String binaryNum) {
+        String result = "";
+        // 当起始位为0的时候，除了起始位，后面的使用无符号位的二进制的转换方法
+        if (binaryNum.startsWith("0")) {
+            result = "+" + binaryToDecimalUnsigned(binaryNum.substring(1));
+        }
+        // 否则，起始位就是1，也就是说这个数据是一个负数
+        // 负数除了符号位，其他位都要反转，然后在计算
+        else {
+            result = "-" + binaryToDecimalUnsigned(reverseBinaryNum(binaryNum.substring(1)));
+        }
+        return result;
+    }
+
+    /**
+     * 反转二进制数字(如果原本的二进制数字是0，反转后为1，反之从1反转为0)
+     * @return String
+     */
+    public static String reverseBinaryNum(String binaryNum) {
+        String result = "";
+        StringBuilder sbTemp = new StringBuilder();
+        String[] binaryNumArr = binaryNum.split("");
+        for (String str : binaryNumArr) {
+            // 判断数据是不是二进制数据
+            if (!str.equals("0") && !str.equals("1")) {
+                return "False";
+            }
+            sbTemp.append((str.equals("0")) ? "1" : "0");
+        }
+        result = sbTemp.toString();
+        return result;
+    }
 
     /**
      * 递归计算x的n次幂
      * @return Long
      */
-    public int xPowerNRecursion(int x, int n) {
+    public static int xPowerNRecursion(int x, int n) {
         int result = 0;
         if (n == 0) {
             result = 1;
@@ -306,15 +453,6 @@ public class BaseChangesUtils {
         }
         return y;
     }
-
-    /**
-     * 二进制方法计算x的n次幂(对外暴露)
-     * @return int
-     */
-    public int xPowerNBinarys(int x, int n) {
-        return xPowerNBinary(x, n);
-    }
-
 
     /**
      * 构建十六进制转换二进制的HashMap
