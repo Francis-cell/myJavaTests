@@ -1,9 +1,12 @@
 import dateGetTests.DateGetMethods;
 import javaMailTests.javaMailUtils.SendMailUtils;
+import stringArrayTests.StringArrayTest01;
 import utils.arithmeticUtils.ArithmeticUtils;
 import utils.baseChanges.BaseChangesUtils;
+import utils.myLogger.MyLoggerUtils;
 
 import java.math.BigDecimal;
+import java.util.logging.Logger;
 
 /**
  * @ClassName MainTest
@@ -82,6 +85,10 @@ public class MainTest {
         System.out.println("二进制--》十进制");
         System.out.println(BaseChangesUtils.binaryToDecimal("11110010101010111"));
         System.out.println(BaseChangesUtils.binaryToDecimal("0x235"));
+        // 二进制转换十进制数据(带符号位和不带符号位)
+        System.out.println(BaseChangesUtils.binaryToDecimal("11101011", true));
+        System.out.println(BaseChangesUtils.binaryToDecimal("01101011", true));
+        System.out.println(BaseChangesUtils.binaryToDecimal("11101011", false));
 
         // 十进制--》二进制（浮点数操作）
         System.out.println("十进制--》二进制");
@@ -125,12 +132,6 @@ public class MainTest {
 
         System.out.println(BaseChangesUtils.hexToDecimal("0xabcd"));
         System.out.println(BaseChangesUtils.binaryToDecimal("0xabcd"));
-
-
-        // 二进制转换十进制数据
-        System.out.println(BaseChangesUtils.binaryToDecimal("11101011", true));
-        System.out.println(BaseChangesUtils.binaryToDecimal("01101011", true));
-        System.out.println(BaseChangesUtils.binaryToDecimal("11101011", false));
     }
 
     /**
@@ -178,7 +179,7 @@ public class MainTest {
     }
 
     /**
-     *
+     * 邮件发送测试
      * @return void
      */
     public void sendMailTest() {
@@ -186,10 +187,44 @@ public class MainTest {
         SendMailUtils.sendEmail();
     }
 
-    public static void main(String[] args) {
+    /**
+     * 自定义日志测试
+     * @return void
+     */
+    public void myLoggerTest() {
+        // 需要保存到本地指定路径下的日志定义方式
+        //String path = "C:\\Users\\86185\\Desktop\\temp\\logTest\\log1.txt";
+        //Logger myLogger = MyLoggerUtils.myLogger(path);
+
+        // 无需保存到本地文件中的日志定义方式
+        Logger myLogger = MyLoggerUtils.myLogger();
+
+        myLogger.info("这是一个info日志信息：普通信息");
+        myLogger.warning("这是一个warning日志信息：警告信息");
+        myLogger.config("这是一个config日志信息：配置信息");
+        myLogger.severe("这是一个severe日志信息：严重信息");
+
+
+        // 直接使用自定义的logger进行测试
+        MyLoggerUtils.logger.info("这是一条info消息");
+        MyLoggerUtils.logger.warning("这是一条warning消息");
+        MyLoggerUtils.logger.severe("这是一条severe消息");
+        MyLoggerUtils.logger.config("这是一条config消息");
+    }
+
+    /**
+     * String和Array之间的转换测试
+     * @return void
+     */
+    public void stringArrayTest() {
+        StringArrayTest01 strArr = new StringArrayTest01();
+        strArr.stringArray();
+    }
+
+    public static void main(String[] args){
         MainTest mainTest = new MainTest();
         // 进制转换测试
-        mainTest.baseTest();
+        //mainTest.baseTest();
 
         // 时间输出测试
         //mainTest.timeTest();
@@ -199,5 +234,11 @@ public class MainTest {
 
         // 邮件发送测试
         //mainTest.sendMailTest();
+
+        // 自定义日志测试
+        //mainTest.myLoggerTest();
+
+        // String和Array之间的转换测试
+        mainTest.stringArrayTest();
     }
 }

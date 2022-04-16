@@ -66,7 +66,7 @@ public class BaseChangesUtils {
      * 将长度为4的整数倍的二进制数据转换成十六进制的数据
      * @return String
      */
-    public static String iBinaryToHex(String[] binaryNumArr) {
+    private static String iBinaryToHex(String[] binaryNumArr) {
         // 获取二进制转十六进制的hashMap
         HashMap<String, String> binaryHexHashMap = getBinaryHexHashMap();
         String result = "";
@@ -109,7 +109,7 @@ public class BaseChangesUtils {
      * 将十六进制的String类型的数组转换成二进制的数据
      * @return String
      */
-    public static String iHexToBinary(String[] hexArr, Boolean man) {
+    private static String iHexToBinary(String[] hexArr, Boolean man) {
         HashMap<String, String> hexBinaryHashMap = getHexBinaryHashMap();
         String result = "";
         for (String str : hexArr) {
@@ -150,7 +150,7 @@ public class BaseChangesUtils {
      * 将String数组中的数据依次转换成十六进制的数据，最终返回结果
      * @return Long
      */
-    public static int iHexToDecimal(String[] hexArr) {
+    private static int iHexToDecimal(String[] hexArr) {
         int result = 0;
         // 首先构建16进制的hashMap
         HashMap<String, Integer> hexHashMap = new HashMap<>();
@@ -269,7 +269,7 @@ public class BaseChangesUtils {
      * 十进制数据转换二进制数据（整数部分的处理）
      * @return String
      */
-    public static String decimalToBinaryIntPart(int decimalNum) {
+    private static String decimalToBinaryIntPart(int decimalNum) {
         String result = "";
         if (decimalNum == 0 || decimalNum == 1) {
             return decimalNum == 0 ? "0" : "1";
@@ -287,7 +287,7 @@ public class BaseChangesUtils {
      * 十进制数据转换二进制数据（小数部分的处理）
      * @return String
      */
-    public static String decimalToBinaryDoublePart(double decimalNum, int digit) {
+    private static String decimalToBinaryDoublePart(double decimalNum, int digit) {
         String result = "";
         // 因为这里的数据对double数据的要求为0.XXX，所以不满足条件的直接返回false即可(针对直接调用这个方法的)
         if (!Double.toString(decimalNum).split("\\.")[0].equals("0")) {
@@ -359,7 +359,7 @@ public class BaseChangesUtils {
      * 无符号二进制数据转换成十进制数据
      * @return String
      */
-    public static String binaryToDecimalUnsigned(String binaryNum) {
+    private static String binaryToDecimalUnsigned(String binaryNum) {
         String result = "";
         String[] binaryNumArr = binaryNum.split("");
         int tempResult = 0;
@@ -377,7 +377,7 @@ public class BaseChangesUtils {
      * 有符号二进制数据转换成十进制数据
      * @return String
      */
-    public static String binaryToDecimalSigned(String binaryNum) {
+    private static String binaryToDecimalSigned(String binaryNum) {
         String result = "";
         // 当起始位为0的时候，除了起始位，后面的使用无符号位的二进制的转换方法
         if (binaryNum.startsWith("0")) {
@@ -458,7 +458,7 @@ public class BaseChangesUtils {
      * 构建十六进制转换二进制的HashMap
      * @return HashMap<String, String>
      */
-    public static HashMap<String, String> getHexBinaryHashMap() {
+    private static HashMap<String, String> getHexBinaryHashMap() {
         HashMap<String, String> result = new HashMap<>();
         result.put("0", "0000");
         result.put("1", "0001");
@@ -483,7 +483,7 @@ public class BaseChangesUtils {
      * 构建二进制转十六进制的HashMap
      * @return HashMap<String, String>
      */
-    public static HashMap<String, String> getBinaryHexHashMap() {
+    private static HashMap<String, String> getBinaryHexHashMap() {
         HashMap<String, String> result = new HashMap<>();
         result.put("0000", "0");
         result.put("0001", "1");
