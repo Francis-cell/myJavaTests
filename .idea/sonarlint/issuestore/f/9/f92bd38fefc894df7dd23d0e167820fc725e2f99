@@ -1,0 +1,37 @@
+
+P
+java:S1118":Add a private constructor to hide the implicit public one.(åÆóÇ
+=
+java:S1125t"'Remove the unnecessary boolean literal.(ú“ÕŒ
+T
+java:S1854¹"8Remove this useless assignment to local variable "flag".(Î™µøÿÿÿÿ
+E
+java:S1481¹")Remove this unused "flag" local variable.(Î™µøÿÿÿÿ
+T
+java:S1854ì"8Remove this useless assignment to local variable "flag".(Î™µøÿÿÿÿ
+T
+java:S1854ø"8Remove this useless assignment to local variable "flag".(ŠĞ Šúÿÿÿÿ
+E
+java:S1481ì")Remove this unused "flag" local variable.(Î™µøÿÿÿÿ
+E
+java:S1481ø")Remove this unused "flag" local variable.(ŠĞ Šúÿÿÿÿ
+>
+java:S1125Ü"'Remove the unnecessary boolean literal.(‹Ñ‚£
+a
+java:S1192""FDefine a constant instead of duplicating this literal "False" 9 times.(ñê¤çüÿÿÿÿ
+m	java:S127O"XRefactor the code in order to not assign to this loop counter from within the loop body.(¯ÀÚè
+1
+java:S1643Q"Use a StringBuilder instead.(î³ìL
+7
+java:S1643u"Use a StringBuilder instead.(¶ÄÊÙşÿÿÿÿ
+2
+java:S1643w"Use a StringBuilder instead.(Á´ø
+3
+java:S1643Ñ"Use a StringBuilder instead.(“„ŒÙ
+8
+java:S1643–"Use a StringBuilder instead.(¯ åıÿÿÿÿ
+8
+java:S1643¯"Use a StringBuilder instead.(Ú¿Š¼úÿÿÿÿ
+@
+java:S5411t"*Use the primitive boolean expression here.(ú“ÕŒ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(óÜñü

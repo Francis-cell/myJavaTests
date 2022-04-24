@@ -1,11 +1,16 @@
 import dateGetTests.DateGetMethods;
+import genericsTests.GenericClass;
+import genericsTests.GenericTest01;
 import javaMailTests.javaMailUtils.SendMailUtils;
+import staticCodeTests.StaticValueTest;
 import stringArrayTests.StringArrayTest01;
 import utils.arithmeticUtils.ArithmeticUtils;
 import utils.baseChanges.BaseChangesUtils;
 import utils.myLogger.MyLoggerUtils;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 
 /**
@@ -218,7 +223,80 @@ public class MainTest {
      */
     public void stringArrayTest() {
         StringArrayTest01 strArr = new StringArrayTest01();
-        strArr.stringArray();
+        // String转Array测试
+        strArr.stringToArray();
+        // Array转String测试
+        strArr.arrayToString();
+
+        // 携带编码方式的转换
+        String str = "你好鸭";
+        strArr.StringArrayWithCode(str);
+    }
+
+    /**
+     * 泛型方法测试
+     * @return void
+     */
+    public void genericTest() {
+        System.out.println("==============1、数组打印测试==============");
+        // 创建不同类型的数组
+        Integer[] intArray = {1, 2, 3, 4, 5, 6};
+        Double[] doubleArray = {1.1, 1.2, 1.3, 1.4, 1.5, 1.6};
+        Character[] charArray = {'A', 'B', 'C', 'D', 'E', 'F'};
+
+        // 调用泛型方法
+        System.out.println("整型数组为：");
+        GenericTest01.printArray(intArray);
+
+        System.out.println("Double型数组为：");
+        GenericTest01.printArray(doubleArray);
+
+        System.out.println("Char型数组为：");
+        GenericTest01.printArray(charArray);
+
+
+        System.out.println("==============2、最大值测试==============");
+        System.out.printf("%d, %d, %d 中最大的值是: %d\n\n", 3, 6, 1, GenericTest01.maximum(3, 6, 1));
+        System.out.printf("%.1f, %.1f, %.1f 中最大的值是: %.1f\n\n", 1.1, 9.0, 3.7, GenericTest01.maximum(1.1, 9.0, 3.7));
+        System.out.printf("%s, %s, %s 中最大的值时: %s\n\n", "apple", "orange", "app", GenericTest01.maximum("apple", "orange", "app"));
+
+
+        System.out.println("==============3、泛型类的定义和使用==============");
+        // 新建泛型类对象
+        GenericClass strGeneric = new GenericClass<String>();
+        GenericClass<Integer> integerGeneric = new GenericClass<>();
+
+        strGeneric.setT("123");
+        integerGeneric.setT(456);
+
+        System.out.printf("整型值为: %d\n\n", integerGeneric.getT());
+        System.out.printf("字符串的值为: %s\n\n", strGeneric.getT());
+
+
+        System.out.println("==============4、类型通配符测试==============");
+        List<String> strings = new ArrayList<>();
+        List<Integer> integers = new ArrayList<>();
+        List<Number> numbers = new ArrayList<>();
+
+        strings.add("123");
+        integers.add(456);
+        numbers.add(789);
+
+        GenericTest01.getData(strings);
+        GenericTest01.getData(integers);
+        GenericTest01.getData(numbers);
+    }
+
+    /**
+     * 静态初始化值测试
+     * @return void
+     */
+    public void staticTest() {
+        // 打印八种基本数据类型的静态初始化值
+        StaticValueTest.baseStaticValues();
+
+        // 其他的数据类型的静态初始值
+        StaticValueTest.otherStaticValues();
     }
 
     public static void main(String[] args){
@@ -239,6 +317,12 @@ public class MainTest {
         //mainTest.myLoggerTest();
 
         // String和Array之间的转换测试
-        mainTest.stringArrayTest();
+        //mainTest.stringArrayTest();
+
+        // 泛型测试
+        //mainTest.genericTest();
+
+        // 静态测试
+        mainTest.staticTest();
     }
 }

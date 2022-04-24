@@ -1,0 +1,6 @@
+
+h
+java:S2975"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(™”” 
+=
+java:S1185"(Remove this method to simply inherit it.(™”” 
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¶¹½$

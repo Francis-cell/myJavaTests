@@ -1,0 +1,63 @@
+
+R
+java:S1854"<Remove this useless assignment to local variable "str01Arr".(Ôïğä
+S	java:S106"9Replace this use of System.out or System.err by a logger.(˜à™‹ûÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(Ş´·
+C
+java:S1481"-Remove this unused "str01Arr" local variable.(Ôïğä
+S	java:S106"9Replace this use of System.out or System.err by a logger.(•ûä‰øÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(Õ±¿ä
+N	java:S106!"9Replace this use of System.out or System.err by a logger.(ºùÆÉ
+S	java:S106&"9Replace this use of System.out or System.err by a logger.(¼µÜĞıÿÿÿÿ
+V	java:S125%"<This block of commented-out lines of code should be removed.(ñäğÓúÿÿÿÿ
+S	java:S106+"9Replace this use of System.out or System.err by a logger.(š—°øÿÿÿÿ
+S	java:S1066"9Replace this use of System.out or System.err by a logger.(£§é•ıÿÿÿÿ
+Q	java:S1255"<This block of commented-out lines of code should be removed.(àÔˆ§
+S	java:S106C"9Replace this use of System.out or System.err by a logger.(£Òÿÿÿÿÿ
+N	java:S106F"9Replace this use of System.out or System.err by a logger.(€¬ûš
+h	java:S100N"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ã¯äıÿÿÿÿ
+U	java:S106O"9Replace this use of System.out or System.err by a logger.(‹ñõ’8š¹Øªƒ0
+U	java:S106Q"9Replace this use of System.out or System.err by a logger.(–Ê„¢8š¹Øªƒ0
+V
+java:S4719R"9Replace charset name argument with StandardCharsets.UTF_8(¦ú½³8š¹Øªƒ0
+U	java:S106T"9Replace this use of System.out or System.err by a logger.(¶í„ÿ8š¹Øªƒ0
+Z	java:S106V"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8š¹Øªƒ0
+Z	java:S106X"9Replace this use of System.out or System.err by a logger.(¢—©İÿÿÿÿÿ8š¹Øªƒ0
+[
+java:S4719Y"9Replace charset name argument with StandardCharsets.UTF_8(›€ã¢ÿÿÿÿÿ8†ìØªƒ0
+U	java:S106Z"9Replace this use of System.out or System.err by a logger.(ÄóÃ¥8š¹Øªƒ0
+Z	java:S106["9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8š¹Øªƒ0
+Z	java:S106]"9Replace this use of System.out or System.err by a logger.(ØÏØºşÿÿÿÿ8š¹Øªƒ0
+W
+java:S4719^":Replace charset name argument with StandardCharsets.UTF_16(’õ±Ë8š¹Øªƒ0
+U	java:S106`"9Replace this use of System.out or System.err by a logger.(¶í„ÿ8š¹Øªƒ0
+Z	java:S106b"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8š¹Øªƒ0
+Z	java:S106d"9Replace this use of System.out or System.err by a logger.(¢—©İÿÿÿÿÿ8š¹Øªƒ0
+\
+java:S4719e":Replace charset name argument with StandardCharsets.UTF_16(ƒ İÿÿÿÿÿ8†ìØªƒ0
+U	java:S106f"9Replace this use of System.out or System.err by a logger.(ÄóÃ¥8š¹Øªƒ0
+Z	java:S106g"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8š¹Øªƒ0
+Z	java:S106i"9Replace this use of System.out or System.err by a logger.(•°Ñ®øÿÿÿÿ8¸¹Øªƒ0
+`
+java:S4719j">Replace charset name argument with StandardCharsets.ISO_8859_1(ô£¢Øøÿÿÿÿ8¸¹Øªƒ0
+U	java:S106l"9Replace this use of System.out or System.err by a logger.(¶í„ÿ8¸¹Øªƒ0
+Z	java:S106n"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8¸¹Øªƒ0
+Z	java:S106p"9Replace this use of System.out or System.err by a logger.(¢—©İÿÿÿÿÿ8¸¹Øªƒ0
+`
+java:S4719q">Replace charset name argument with StandardCharsets.ISO_8859_1(ÿÛÚëÿÿÿÿÿ8–ìØªƒ0
+U	java:S106r"9Replace this use of System.out or System.err by a logger.(ÄóÃ¥8¸¹Øªƒ0
+Z	java:S106s"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8¸¹Øªƒ0
+U	java:S106u"9Replace this use of System.out or System.err by a logger.(ÿ”ù8¸¹Øªƒ0
+Y
+java:S4719v"<Replace charset name argument with StandardCharsets.US_ASCII(Æìı8¸¹Øªƒ0
+U	java:S106x"9Replace this use of System.out or System.err by a logger.(¶í„ÿ8¸¹Øªƒ0
+Z	java:S106z"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8¸¹Øªƒ0
+Z	java:S106|"9Replace this use of System.out or System.err by a logger.(¢—©İÿÿÿÿÿ8¸¹Øªƒ0
+^
+java:S4719}"<Replace charset name argument with StandardCharsets.US_ASCII(´øœüÿÿÿÿ8–ìØªƒ0
+U	java:S106~"9Replace this use of System.out or System.err by a logger.(ÄóÃ¥8¸¹Øªƒ0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8¸¹Øªƒ0
+V	java:S106„"9Replace this use of System.out or System.err by a logger.(‹ñõ’8¸¹Øªƒ0
+
+java:S1192X"_Define a constant instead of duplicating this literal "è¿˜åŸä¸­æ–‡å­—ç¬¦ä¸²å¼€å§‹ï¼š" 4 times.(¢—©İÿÿÿÿÿ8¸¹Øªƒ0
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Æ«÷Ûşÿÿÿÿ
