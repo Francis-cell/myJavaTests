@@ -59,10 +59,6 @@ Y
 .src/utils/arithmeticUtils/ArithmeticUtils.java,5\d\5dd2c6a185e5bbfb02eea78e6f26401e931f21a8
 b
 2src/javaMailTests/javaMailUtils/SendMailUtils.java,8\5\8586d4026289e28a4a2afdee79afcafbe52f2d2a
-T
-$src/dateGetTests/DateGetMethods.java,c\b\cb386ceb73b321a8c1fbff40a67e0bbc5a29bfd4
-S
-#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 [
 +src/utils/baseChanges/BaseChangesUtils.java,f\9\f92bd38fefc894df7dd23d0e167820fc725e2f99
 Y
@@ -115,7 +111,3 @@ R
 "src/lambdaTests/LambdaTests01.java,b\0\b0951db8415a2dca6f2fdd5e4a0d31a4e1f76d17
 X
 (src/staticCodeTests/StaticCodesTest.java,0\4\046e62cd0795247739ece9a86041ea6957e0d9f7
-A
-src/MainTest.java,f\b\fbe4a19bdb1c5454c9c81dff3595c2a5c1ca11f9
-X
-(src/staticCodeTests/StaticValueTest.java,f\e\fe4997f4fd23d99af9c625a81d3d70d941b1cde0
