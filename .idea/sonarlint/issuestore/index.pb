@@ -53,8 +53,6 @@ Y
 )src/utils/myLogger/MyLoggerFormatter.java,9\c\9c4880df0402de64c489f872018ba2df0e39ad52
 U
 %src/utils/myLogger/MyLoggerUtils.java,9\a\9aaadccb183236c6ec4d96004f9b41625a27decc
-9
-	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 [
 +src/stringArrayTests/StringArrayTest01.java,b\5\b5de8667c371502eb1ca68b4cb2157d4eadc2148
 Z
