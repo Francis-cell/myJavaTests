@@ -33,6 +33,7 @@ public class Teacher implements Cloneable{
         this.age = age;
     }
 
+    @Override
     public Object clone() {
         try {
             return super.clone();
