@@ -25,7 +25,9 @@ public class MyTest17 {
         //arrayList.set(0, "a");
         //System.out.println(arrayList);
 
-        String str = "123456789";
-        System.out.println(str.length());
+        String str = "39654077";
+        //System.out.println(str.length());
+
+        System.out.println(Long.parseLong(str));
     }
 }
