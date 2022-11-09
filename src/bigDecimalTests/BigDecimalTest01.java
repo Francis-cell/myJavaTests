@@ -143,18 +143,34 @@ public class BigDecimalTest01 {
     }
 
 
+    /**
+     * BigDecimal和Double转换的测试
+     * @return void
+     */
+    public void bigDecimalDoubleTest() {
+        System.out.println("new BigDecimal(0.99): " + new BigDecimal(0.99));
+        System.out.println("new BigDecimal('0.99'): " + new BigDecimal("0.99"));
+        System.out.println("BigDecimal.valueOf(0.99): " + BigDecimal.valueOf(0.99));
+        System.out.println("BigDecimal.valueOf(0.99f): " + BigDecimal.valueOf(0.99f));
+        System.out.println("new BigDecimal(Double.toString(0.99)): " + new BigDecimal(Double.toString(0.99)));
+    }
+
+
     public static void main(String[] args) {
         BigDecimalTest01 bdt1 = new BigDecimalTest01();
         // 基本测试
         //bdt1.baseTests();
 
         // 常用方法测试
-        bdt1.usuallyTests();
+        //bdt1.usuallyTests();
 
         // 大小比较测试
         //bdt1.sizeComparison();
 
         // 格式化测试
         //bdt1.formatBigDecimal();
+
+        // BigDecimal和Double转换的测试
+        bdt1.bigDecimalDoubleTest();
     }
 }
