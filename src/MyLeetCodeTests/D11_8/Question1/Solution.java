@@ -27,7 +27,7 @@ public class Solution {
     }
 
     /***
-     * 描述：颠倒链表偶数位和奇数位的元素，不使用交换值的方式实现
+     * 描述.md：颠倒链表偶数位和奇数位的元素，不使用交换值的方式实现
      * @param head
      */
     public ListNode reverseList(ListNode head) {
