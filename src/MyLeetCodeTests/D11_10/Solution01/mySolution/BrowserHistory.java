@@ -1,4 +1,4 @@
-package MyLeetCodeTests.D11_10.Solution01;
+package MyLeetCodeTests.D11_10.Solution01.mySolution;
 
 /**
  * @ClassName BrowserHistory
