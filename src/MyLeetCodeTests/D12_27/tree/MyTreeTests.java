@@ -5,7 +5,6 @@ package MyLeetCodeTests.D12_27.tree;
  * @Description Java Tree使用
  * @Author zhumengren
  * @Date 2022/12/27 18:50
- * @Email zhumengren@sinosoft.com
  * @Version 1.0
  **/
 public class MyTreeTests {
