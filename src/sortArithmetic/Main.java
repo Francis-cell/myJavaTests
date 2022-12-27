@@ -7,7 +7,7 @@
 // * @version 1.0
 // * @date 2021/9/25 19:57
 // */
-//public class Main {
+//public class MainStringInput {
 //    public static void main(String[] args) {
 //        int[] a = {3, 4, 2, 9, 10, 1, 8, 7, 5, 6};
 ////        insert_sorted(a);

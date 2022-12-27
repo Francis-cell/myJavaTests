@@ -1,6 +1,8 @@
 package javaTests;
 
+import java.math.BigDecimal;
 import java.text.ParseException;
+import java.util.HashMap;
 
 /**
  * @ClassName MyTest12
@@ -30,17 +32,17 @@ public class MyTest17 {
         //
         //System.out.println(Long.parseLong(str));
 
-        //BigDecimal bigDecimal = new BigDecimal(1.010);
-        //float v = bigDecimal.setScale(3, BigDecimal.ROUND_HALF_UP).floatValue();
-        //System.out.println(v);
+        //BigDecimal bigDecimal1 = new BigDecimal("1");
+        //System.out.println(bigDecimal1.divide(new BigDecimal("3"), 3, BigDecimal.ROUND_UP));
+        //System.out.println(bigDecimal1.divide(new BigDecimal("3"), 3, BigDecimal.ROUND_DOWN));
+        //System.out.println(bigDecimal1.divide(new BigDecimal("3"), 3, BigDecimal.ROUND_CEILING));
+        //System.out.println(bigDecimal1.divide(new BigDecimal("3"), 3, BigDecimal.ROUND_FLOOR));
+        //System.out.println(bigDecimal1.divide(new BigDecimal("3"), 3, BigDecimal.ROUND_HALF_UP));
+        //System.out.println(bigDecimal1.divide(new BigDecimal("3"), 3, BigDecimal.ROUND_HALF_DOWN));
+        //System.out.println(bigDecimal1.divide(new BigDecimal("3"), 3, BigDecimal.ROUND_HALF_EVEN));
+        //System.out.println(bigDecimal1.divide(new BigDecimal("3"), 3, BigDecimal.ROUND_UNNECESSARY));
 
-        //Double b1 = 20.0;
-        //Double b2 = 80.0;
-        //if (b1 + b2 == 100.00) {
-        //    System.out.println(1);
-        //}
-
-        Character character = new Character('0');
-        System.out.println(character == 48);
+        HashMap<String, Object> stringObjectHashMap = new HashMap<>();
+        System.out.println(stringObjectHashMap);
     }
 }

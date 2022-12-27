@@ -1,7 +1,7 @@
 package MyLeetCodeTests.D11_2;
 
 /**
- * @ClassName Main
+ * @ClassName MainStringInput
  * @Description TODO
  * @Author zhumengren
  * @Date 2022/11/3 20:14
