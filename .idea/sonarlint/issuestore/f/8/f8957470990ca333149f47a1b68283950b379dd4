@@ -1,6 +1,0 @@
-
-B
-java:S1125"'Remove the unnecessary boolean literal.(þ æ‡þÿÿÿÿ
-M	java:S106"9Replace this use of System.out or System.err by a logger.(Þ§¹N
-Q	java:S125"<This block of commented-out lines of code should be removed.(·á×ô
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¨Íà’8˜Ì¯‚ù/
