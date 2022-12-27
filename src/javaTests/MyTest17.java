@@ -25,9 +25,22 @@ public class MyTest17 {
         //arrayList.set(0, "a");
         //System.out.println(arrayList);
 
-        String str = "39654077";
-        //System.out.println(str.length());
+        //String str = "39654077";
+        ////System.out.println(str.length());
+        //
+        //System.out.println(Long.parseLong(str));
 
-        System.out.println(Long.parseLong(str));
+        //BigDecimal bigDecimal = new BigDecimal(1.010);
+        //float v = bigDecimal.setScale(3, BigDecimal.ROUND_HALF_UP).floatValue();
+        //System.out.println(v);
+
+        //Double b1 = 20.0;
+        //Double b2 = 80.0;
+        //if (b1 + b2 == 100.00) {
+        //    System.out.println(1);
+        //}
+
+        Character character = new Character('0');
+        System.out.println(character == 48);
     }
 }
