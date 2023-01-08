@@ -2,7 +2,9 @@ package javaTests;
 
 import java.math.BigDecimal;
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * @ClassName MyTest12
@@ -42,7 +44,12 @@ public class MyTest17 {
         //System.out.println(bigDecimal1.divide(new BigDecimal("3"), 3, BigDecimal.ROUND_HALF_EVEN));
         //System.out.println(bigDecimal1.divide(new BigDecimal("3"), 3, BigDecimal.ROUND_UNNECESSARY));
 
-        HashMap<String, Object> stringObjectHashMap = new HashMap<>();
-        System.out.println(stringObjectHashMap);
+        //HashMap<String, Object> stringObjectHashMap = new HashMap<>();
+        //System.out.println(stringObjectHashMap);
+
+        //List<Integer> arrayList = new ArrayList<>();
+        //arrayList.add()
+
+        //Integer.parseInt();
     }
 }
