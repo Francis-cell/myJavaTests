@@ -1,7 +1,5 @@
 package MyLeetCodeTests.My2022Lists.D12_25;
 
-import java.util.Scanner;
-
 // 注意类名必须为 Main, 不要有任何 package xxx 信息
 public class Snippet {
 
