@@ -1,7 +1,0 @@
-
-T
-java:S1854"7Remove this useless assignment to local variable "pt7".(‚æ·Ş8şŠŞÛƒ0
-E
-java:S1481"(Remove this unused "pt7" local variable.(‚æ·Ş8‹ŞÛƒ0
-]	java:S125"<This block of commented-out lines of code should be removed.(Äñåüÿÿÿÿ8‹ŞÛƒ0
-n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¬¾Å@

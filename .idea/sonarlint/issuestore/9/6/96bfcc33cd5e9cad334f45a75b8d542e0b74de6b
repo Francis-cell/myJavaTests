@@ -1,9 +1,0 @@
-
-T
-java:S1659">Declare "x" and all following declarations on a separate line.(ŸÀÓ¤
-E
-java:S1172"/Remove these unused method parameters "c", "d".(×„¦
-V	java:S125"<This block of commented-out lines of code should be removed.(óöà™úÿÿÿÿ
-Q	java:S125"<This block of commented-out lines of code should be removed.(ıõÖ³
-V	java:S125"<This block of commented-out lines of code should be removed.(‰Ê»ùÿÿÿÿ
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(“Á”Ú

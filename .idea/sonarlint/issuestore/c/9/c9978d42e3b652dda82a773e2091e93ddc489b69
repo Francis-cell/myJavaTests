@@ -1,7 +1,0 @@
-
-Z
-java:S1854"=Remove this useless assignment to local variable "myObject4".(ÔŠ¸€8¸÷øÙƒ0
-K
-java:S1481".Remove this unused "myObject4" local variable.(ÔŠ¸€8¸÷øÙƒ0
-W	java:S125"<This block of commented-out lines of code should be removed.(êç58¸÷øÙƒ0
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ØŽï¼ýÿÿÿÿ
