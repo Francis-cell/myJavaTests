@@ -1,5 +1,6 @@
 package MyLeetCodeTests.My2022Lists.D11_6.翻转链表;
 
+import java.util.ArrayList;
 import java.util.Stack;
 
 /**
@@ -27,7 +28,31 @@ public class Solution {
     }
 
 
-    public ListNode ReverseList(ListNode head) {
+    /** 使用额外空间实现链表的翻转实现方案 */
+    public static ListNode test(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        // 初始化一个列表存储链表中各个节点中的值
+        ArrayList<ListNode> list = new ArrayList<>();
+        while (head != null) {
+            list.add(head);
+            head = head.next;
+        }
+        // 将第一个节点的next赋值为null
+        list.get(0).next = null;
+        // 反转列表并进行链表的连接
+        int N = list.size();
+        for (int i = 1; i < N; i++) {
+            // 链接
+            list.get(i).next = list.get(i-1);
+        }
+        return list.get(N-1);
+    }
+
+
+    /**  */
+    public static ListNode ReverseLinkedList(ListNode head) {
         Stack<ListNode> stack = new Stack<>();
         // 将链表中的所有元素全部放到栈中
         while (head != null) {
@@ -54,15 +79,6 @@ public class Solution {
     }
 
 
-    public static void main(String[] args) {
-        ListNode first = new ListNode(1);
-        ListNode second = new ListNode(2);
-        ListNode third = new ListNode(3);
-        first.next = second;
-        second.next = third;
+    public static void main(String[] args) {}
 
-        Solution solution = new Solution();
-        ListNode listNode = solution.ReverseList(first);
-        System.out.println(listNode);
-    }
 }
