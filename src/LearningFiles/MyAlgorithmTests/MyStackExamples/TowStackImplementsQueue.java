@@ -1,4 +1,4 @@
-package LearningFiles.MyAlgorithmTests.MyQueueExamples;
+package LearningFiles.MyAlgorithmTests.MyStackExamples;
 
 import java.util.Stack;
 
