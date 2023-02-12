@@ -31,7 +31,7 @@ public class MergeSort {
         
         // 将temp数组拷贝到arr数组上
         for (int j = 0; j < temp.length; j++) {
-            arr[L + i] = temp[i];
+            arr[L + j] = temp[j];
         }
     }
     
