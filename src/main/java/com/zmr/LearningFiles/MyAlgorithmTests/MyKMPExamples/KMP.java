@@ -96,7 +96,11 @@ public class KMP {
 
     /** --------------------------对数器------------------------------ */
     
-    /** 随机字符串 */
+    /** 
+     * 随机字符串 
+     * 说明：这里的possibilities的值表示的是：如果我只想要abcd四种字符串，则传入4
+     * 
+     */
     public static String generateRandomString(int possibilities, int size) {
         char[] ans = new char[(int) (Math.random() * size) + 1];
         for (int i = 0; i < ans.length; i++) {
