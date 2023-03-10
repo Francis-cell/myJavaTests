@@ -1,4 +1,4 @@
-package com.zmr.LearningFiles.MyAlgorithmTests.MyBTExamples;
+package com.zmr.LearningFiles.MyAlgorithmTests.MyBTExamples.TraversalBTExamples;
 
 /**
  * @ClassName RecursiveTraversalBT
