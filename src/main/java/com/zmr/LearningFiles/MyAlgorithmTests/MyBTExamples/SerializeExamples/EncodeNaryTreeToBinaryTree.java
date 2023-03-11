@@ -1,4 +1,4 @@
-package com.zmr.LearningFiles.MyAlgorithmTests.MyBTExamples.TraversalBTExamples;
+package com.zmr.LearningFiles.MyAlgorithmTests.MyBTExamples.SerializeExamples;
 
 import java.util.ArrayList;
 import java.util.List;
