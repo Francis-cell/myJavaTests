@@ -83,7 +83,7 @@ public class IfCompleteBT {
         // 申请两个节点变量，分别用来存储左孩子和右孩子节点
         Node left;
         Node right;
-        
+        queue.add(head);
         while (!queue.isEmpty()) {
             Node cur = queue.poll();
             left = cur.left;
@@ -92,7 +92,7 @@ public class IfCompleteBT {
             // 判断当前节点是否不满足上面的条件
             // 1、已经出现了孩子没有双全的节点，且当前节点有左孩子或者右孩子，那么返回false
             // 2、当前节点有右孩子，但是没有左孩子，返回false
-            if (leaf && (left == null || right == null) 
+            if (leaf && (left != null || right != null) 
             || left == null && right != null) {
                 return false;
             }
