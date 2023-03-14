@@ -1,0 +1,11 @@
+
+?
+java:S2140i")Use "java.util.Random.nextInt()" instead.(Ÿ“˜ã
+F
+java:S2140k")Use "java.util.Random.nextInt()" instead.(Ó³·á8ù¿ş…ì0
+Z	java:S106x"9Replace this use of System.out or System.err by a logger.(óŞâÅúÿÿÿÿ8ú¿ş…ì0
+[	java:S106€"9Replace this use of System.out or System.err by a logger.(¶›üÿÿÿÿÿ8Òˆ†ì0
+[	java:S106„"9Replace this use of System.out or System.err by a logger.(·¸êşÿÿÿÿ8ÊÌì0
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ı¸“À
+_
+java:S2259"BA "NullPointerException" could be thrown; "str1" is nullable here.(ÌºÂ—8…‘ˆ†ì0

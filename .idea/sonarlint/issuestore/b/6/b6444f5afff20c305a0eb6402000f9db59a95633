@@ -1,0 +1,9 @@
+
+U
+java:S1118":Add a private constructor to hide the implicit public one.(“éÇïøÿÿÿÿ
+l
+java:S1104
+"QMake value a static final constant or non-public and provide accessors if needed.(‚¯¥ùÿÿÿÿ
+k
+java:S1104"PMake next a static final constant or non-public and provide accessors if needed.(±±èÃøÿÿÿÿ
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Í·Ù

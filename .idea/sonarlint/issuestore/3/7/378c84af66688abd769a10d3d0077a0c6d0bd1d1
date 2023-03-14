@@ -1,0 +1,20 @@
+
+?
+java:S2140X")Use "java.util.Random.nextInt()" instead.(²´ÛÔ
+D
+java:S2140Z")Use "java.util.Random.nextInt()" instead.(×Æİ³üÿÿÿÿ
+>
+java:S2140c")Use "java.util.Random.nextInt()" instead.(Ë÷?
+Q	java:S125u"<This block of commented-out lines of code should be removed.(˜£ü‹
+Q	java:S125x"<This block of commented-out lines of code should be removed.(ûŸÎß
+T	java:S106€"9Replace this use of System.out or System.err by a logger.(›°§¤üÿÿÿÿ
+T	java:S106‡"9Replace this use of System.out or System.err by a logger.(¶›üÿÿÿÿÿ
+T	java:S106‹"9Replace this use of System.out or System.err by a logger.(·¸êşÿÿÿÿ
+‰
+java:S1319"sThe return type of this method should be an interface such as "SortedSet" rather than the implementation "TreeSet".(š¬â¡
+k	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö‡…İûÿÿÿÿ
+Y
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(«’Ãóùÿÿÿÿ
+2
+java:S1643Q"Use a StringBuilder instead.(›¸‚î
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ŸˆöÚøÿÿÿÿ
