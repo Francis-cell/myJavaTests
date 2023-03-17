@@ -95,7 +95,7 @@ public class MyUnionFind {
                 int aSetSize = sizeMap.get(aHead);
                 int bSetSize = sizeMap.get(bHead);
                 // 分别找到大的set的代表节点和小的set的代表节点
-                Node<V> big = aSetSize > bSetSize ? aHead : bHead;
+                Node<V> big = aSetSize >= bSetSize ? aHead : bHead;
                 Node<V> small = big == aHead ? bHead : aHead;
                 
                 // 将小的set挂到大的set的代表节点上

@@ -9,7 +9,7 @@ package com.zmr.LearningFiles.MyAlgorithmTests.MyAndLookupExamples;
  * 测试链接：https://leetcode.com/problems/friend-circles/
  * 可以直接通过
  */
-public class FrindCircle {
+public class FriendCircle {
     /** 查看形成的朋友圈数量 */
     public static int findCircleNum(int[][] M) {
         // 先获取二维数组的长度
