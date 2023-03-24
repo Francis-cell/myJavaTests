@@ -1,4 +1,4 @@
-package com.zmr.LearningFiles.MyAlgorithmTests.MyDynamicProgramingTests;
+package com.zmr.LearningFiles.MyAlgorithmTests.DynamicProgramming;
 
 /**
  * @ClassName CardsInLine
