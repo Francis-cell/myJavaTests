@@ -61,3 +61,17 @@ bsrc/main/java/com/zmr/LearningFiles/MyAlgorithmTests/DynamicProgramming/Convert
 `src/main/java/com/zmr/LearningFiles/MyAlgorithmTests/DynamicProgramming/StickersToSpellWord.java,d\2\d269c0e63817971b53640795d378fa3a976be399
 i
 9src/main/java/com/zmr/MyLeetCodeTests/D3_21/Solution.java,8\d\8dc354ef583958c5c6b980ac7c3761d68f412e68
+„
+Tsrc/main/java/com/zmr/LearningFiles/MyAlgorithmTests/DynamicProgramming/Bag_0_1.java,c\0\c04b05b0d5ac0849b4c2d38d483611ae154bcddd
+’
+bsrc/main/java/com/zmr/LearningFiles/MyAlgorithmTests/DynamicProgramming/PalindromeSubSequence.java,f\5\f516bb47d9de4594e66b432f2f6dd383c03fb296
+‚
+Rsrc/main/java/com/zmr/LearningFiles/MyJavaTests/javaTests/myTests/StringTests.java,1\a\1af537d1afc29716b04255727ab2df9d9698fe8b
+w
+Gsrc/main/java/com/zmr/LearningFiles/MyJavaTests/javaTests/MyTest20.java,a\7\a720f31a72a9e128172118f261d5de0795018d70
+o
+?src/main/java/com/zmr/NewBrushUpPlan/GreatestFactorStrings.java,3\4\34681c1113c27e99adc197b719234751cb3fe771
+l
+<src/main/java/com/zmr/NewBrushUpPlan/KidWithMostCandies.java,8\d\8d440d95cb4c959175c4107b2a0111f8c3a35105
+†
+Vsrc/main/java/com/zmr/LearningFiles/MyAlgorithmTests/DynamicProgramming/HorseJump.java,4\3\43188162e32b86291f31fbd4a53f08e0c2e36f1b

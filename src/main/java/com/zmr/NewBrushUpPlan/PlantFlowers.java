@@ -57,6 +57,17 @@ public class PlantFlowers {
         
         return lastCount;
     }
+
+
+    /**
+     * 在flowerbed中找到它所能放置的最大的花的数量(递归求解方式)
+     * @param flowerbed
+     * @return
+     */
+    public static int process(int[] flowerbed) {
+        // TODO--后续求出最优解
+        return 0;
+    }
     
     
     public static void main(String[] args) {
