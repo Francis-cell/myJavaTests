@@ -105,3 +105,9 @@ lsrc/main/java/com/zmr/LearningFiles/MyAlgorithmTests/SortExamples/MyMergeSortEx
 jsrc/main/java/com/zmr/LearningFiles/MyAlgorithmTests/SortExamples/MyMergeSortExamples/CountOfRangeSum.java,4\8\48c966b8cca1bd405e504a1535659d9d149cfe77
 ¤
 tsrc/main/java/com/zmr/LearningFiles/MyAlgorithmTests/SortExamples/MyBucketExamples/BucketMulti/SecondRadixCount.java,7\2\72102b988882c8c8ddc76a9a0de2cc9034931df8
+v
+Fsrc/main/java/com/zmr/NewBrushUpPlan/ProductArraysOtherThanItself.java,6\4\649fca6a61dade2ab22ccb6adc9b765054f1f99c
+m
+=src/main/java/com/zmr/NewBrushUpPlan/ReverseWordInString.java,a\3\a3186cbc93459f396a943b36340860a089822b85
+k
+;src/main/java/com/zmr/NewBrushUpPlan/IncreasingTriplet.java,d\8\d8e98d5659caff53e1c541aff601bef087093c72
