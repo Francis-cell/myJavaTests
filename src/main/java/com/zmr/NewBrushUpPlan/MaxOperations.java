@@ -73,7 +73,22 @@ public class MaxOperations {
         Arrays.sort(nums);
         // 定义头尾指针
         int i = 0, j = nums.length - 1;
-
+        
+        while (i < j) { 
+            if (nums[i] + nums[j] == k) {
+                ans++;
+                i++;
+                j--;
+            } 
+            // 说明值比较大，只需要移动右指针让值变小即可
+            else if (nums[i] + nums[j] > k) {
+                j--;
+            }
+            // 说明值比较小，只需要移动左指针让值变大即可
+            else {
+                i++;
+            }
+        }
 
         return ans;
     }
@@ -124,11 +139,12 @@ public class MaxOperations {
             // 初始化随机数组，拷贝数组，生成比较
             int[] arr = generateRandomArray(maxSize, maxValue);
             int[] arr1 = copyArray(arr);
+            int[] arr2 = copyArray(arr);
 
             // 生成随机操作数
             int operations = generateRandomOperate(maxOperation);
 
-            if (maxOperations(arr, operations) != maxOperations01(arr1, operations)) {
+            if (maxOperations(arr, operations) != maxOperations01(arr1, operations) && maxOperations(arr, operations) != maxOperations02(arr1, operations)) {
                 System.out.println("出错了！");
                 System.out.println(Arrays.toString(arr1));
                 System.out.println("操作数：" + operations);
