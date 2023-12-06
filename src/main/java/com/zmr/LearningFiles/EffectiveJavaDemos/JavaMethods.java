@@ -1,4 +1,4 @@
-package com.zmr.LearningFiles.BasicJava.EffectiveJavaDemos;
+package com.zmr.LearningFiles.EffectiveJavaDemos;
 
 public class JavaMethods {
     public double add(float a, float b) {

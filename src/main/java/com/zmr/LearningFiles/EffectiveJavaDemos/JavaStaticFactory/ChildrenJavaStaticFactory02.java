@@ -1,4 +1,4 @@
-package com.zmr.LearningFiles.BasicJava.EffectiveJavaDemos.JavaStaticFactory;
+package com.zmr.LearningFiles.EffectiveJavaDemos.JavaStaticFactory;
 
 public class ChildrenJavaStaticFactory02 extends JavaStaticFactory {
     public ChildrenJavaStaticFactory02(String userName) {

@@ -1,4 +1,4 @@
-package com.zmr.LearningFiles.BasicJava.EffectiveJavaDemos.equalsDemo;
+package com.zmr.LearningFiles.EffectiveJavaDemos.equalsDemo;
 
 import java.util.Objects;
 

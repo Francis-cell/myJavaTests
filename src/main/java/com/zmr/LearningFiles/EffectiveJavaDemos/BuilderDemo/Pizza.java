@@ -1,4 +1,4 @@
-package com.zmr.LearningFiles.BasicJava.EffectiveJavaDemos.BuilderDemo;
+package com.zmr.LearningFiles.EffectiveJavaDemos.BuilderDemo;
 
 import java.util.Set;
 

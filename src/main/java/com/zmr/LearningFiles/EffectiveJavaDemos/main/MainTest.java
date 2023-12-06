@@ -1,10 +1,6 @@
-package com.zmr.LearningFiles.BasicJava.EffectiveJavaDemos.main;
+package com.zmr.LearningFiles.EffectiveJavaDemos.main;
 
-import com.zmr.LearningFiles.BasicJava.EffectiveJavaDemos.BuilderDemo.UserBuilder;
-import com.zmr.LearningFiles.BasicJava.EffectiveJavaDemos.JavaStaticFactory.ChildrenJavaStaticFactory01;
-import com.zmr.LearningFiles.BasicJava.EffectiveJavaDemos.JavaStaticFactory.ChildrenJavaStaticFactory02;
-import com.zmr.LearningFiles.BasicJava.EffectiveJavaDemos.JavaStaticFactory.JavaStaticFactory;
-import com.zmr.LearningFiles.BasicJava.EffectiveJavaDemos.equalsDemo.CaseInsensitiveString;
+import com.zmr.LearningFiles.EffectiveJavaDemos.equalsDemo.CaseInsensitiveString;
 
 public class MainTest {
     public static void main(String[] args) {

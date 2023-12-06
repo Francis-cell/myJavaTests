@@ -1,4 +1,4 @@
-package com.zmr.LearningFiles.BasicJava.EffectiveJavaDemos.JavaStaticFactory;
+package com.zmr.LearningFiles.EffectiveJavaDemos.JavaStaticFactory;
 
 public class JavaStaticFactory {
     /** userName */
