@@ -1,0 +1,22 @@
+
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(°¸öe
+O
+java:S1854E"9Remove this useless assignment to local variable "chars".(á‡°ß
+Q	java:S125G"<This block of commented-out lines of code should be removed.(–¼¬à
+7
+java:S1659X""Declare "left" on a separate line.(¦¢ö
+
+E
+java:S2140ˆ")Use "java.util.Random.nextInt()" instead.(’Ÿùÿÿÿÿ
+4
+java:S2119Š"Save and re-use this "Random".(¼ÝÅf
+=
+java:S1168š"&Return an empty array instead of null.(¥¹ï
+p
+java:S3012Ÿ"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(Â¥î¬
+R	java:S125¦"<This block of commented-out lines of code should be removed.(¸è•ª
+T	java:S106°"9Replace this use of System.out or System.err by a logger.(›°§¤üÿÿÿÿ
+[	java:S106¸"9Replace this use of System.out or System.err by a logger.(¶›üÿÿÿÿÿ8ùìÍ†ˆ1
+[	java:S106¼"9Replace this use of System.out or System.err by a logger.(·¸êŽþÿÿÿÿ8¦Î†ˆ1
+O
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8ìàÌ†ˆ1

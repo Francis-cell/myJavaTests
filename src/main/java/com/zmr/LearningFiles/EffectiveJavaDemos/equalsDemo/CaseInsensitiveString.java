@@ -16,16 +16,20 @@ public final class CaseInsensitiveString {
      */
     @Override
     public boolean equals(Object o) {
-        // compare a CaseInsensitiveString object with a String
-        if (o instanceof CaseInsensitiveString) {
-            return s.equalsIgnoreCase(
-                    ((CaseInsensitiveString) o).s
-            );
-        }
-        // compare a String with a CaseInsensitiveString object
-        if (o instanceof String) {
-            return s.equalsIgnoreCase((String) o);
-        }
-        return false;
+        //// compare a CaseInsensitiveString object with a String
+        //if (o instanceof CaseInsensitiveString) {
+        //    return s.equalsIgnoreCase(
+        //            ((CaseInsensitiveString) o).s
+        //    );
+        //}
+        //// compare a String with a CaseInsensitiveString object
+        //if (o instanceof String) {
+        //    return s.equalsIgnoreCase((String) o);
+        //}
+        //return false;
+
+
+        return o instanceof CaseInsensitiveString &&
+                ((CaseInsensitiveString) o).s.equalsIgnoreCase(s);
     }
 }

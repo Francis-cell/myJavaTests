@@ -1,0 +1,24 @@
+
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(°¸öe
+4
+java:S1659K"Declare "j" on a separate line.(¥Õ¯
+D
+java:S2140d")Use "java.util.Random.nextInt()" instead.(‡Îñ€üÿÿÿÿ
+D
+java:S2140f")Use "java.util.Random.nextInt()" instead.(ÔŒÐñøÿÿÿÿ
+<
+java:S1168m"&Return an empty array instead of null.(¥¹ï
+o
+java:S3012r"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(ôŒÎã
+D
+java:S2140y")Use "java.util.Random.nextInt()" instead.(×¦Š€ÿÿÿÿÿ
+T
+java:S1854Ž"8Remove this useless assignment to local variable "arr2".(óæ¡õýÿÿÿÿ
+V	java:S125}"<This block of commented-out lines of code should be removed.(¾ÉŠýûÿÿÿÿ
+T	java:S106‰"9Replace this use of System.out or System.err by a logger.(›°§¤üÿÿÿÿ
+E
+java:S1481Ž")Remove this unused "arr2" local variable.(óæ¡õýÿÿÿÿ
+T	java:S106”"9Replace this use of System.out or System.err by a logger.(¶›üÿÿÿÿÿ
+T	java:S106•"9Replace this use of System.out or System.err by a logger.(ù£·êýÿÿÿÿ
+O	java:S106–"9Replace this use of System.out or System.err by a logger.(É—ŽÄ
+T	java:S106š"9Replace this use of System.out or System.err by a logger.(‚÷Àøúÿÿÿÿ
