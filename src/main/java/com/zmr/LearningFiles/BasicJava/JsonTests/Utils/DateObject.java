@@ -11,7 +11,7 @@ import java.util.Date;
  * @description
  */
 public class DateObject {
-    @JSONField(format = "yyyy-MM-dd'T'HH:mm:ss.SSS")
+//    @JSONField(format = "yyyy-MM-dd'T'HH:mm:ss.SSS")
     private Date date;
 
     public Date getDate() {

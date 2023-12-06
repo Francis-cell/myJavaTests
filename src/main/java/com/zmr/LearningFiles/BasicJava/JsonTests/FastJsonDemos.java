@@ -7,7 +7,6 @@ import com.zmr.LearningFiles.BasicJava.JsonTests.Utils.DateObject;
 import com.zmr.LearningFiles.BasicJava.JsonTests.Utils.Result;
 import com.zmr.LearningFiles.BasicJava.entity.ObjectDemos;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -66,7 +65,9 @@ public class FastJsonDemos {
         // 将 JSON 字符串解析成对象
         DateObject dateObject = JSON.parseObject(jsonString, DateObject.class);
 
+        String jsonStringWithDateFormat = JSON.toJSONStringWithDateFormat(dateObject.getDate(), "yyyy-MM-dd HH:mm:ss.SSS");
         System.out.println("解析后的时间为：" + dateObject.getDate());
+        System.out.println("解析后的时间为01：" + jsonStringWithDateFormat);
     }
 
     /**

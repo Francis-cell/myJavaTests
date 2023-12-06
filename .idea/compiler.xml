@@ -7,16 +7,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="MyJavaTests" />
+        <module name="NettyClientLearningDemos" />
+        <module name="NettyServerLearningDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="MyJavaTests" target="1.8" />
+      <module name="NettyClientLearningDemo" target="1.8" />
+      <module name="NettyLearningDemo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="MyJavaTests" options="-parameters" />
+      <module name="NettyClientLearningDemo" options="-parameters" />
+      <module name="NettyClientLearningDemos" options="-parameters" />
+      <module name="NettyLearningDemo" options="" />
+      <module name="NettyServerLearningDemo" options="-parameters" />
+      <module name="myJavaTest" options="" />
     </option>
   </component>
 </project>

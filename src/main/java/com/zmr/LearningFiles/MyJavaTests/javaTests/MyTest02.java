@@ -8,10 +8,10 @@ package main.java.com.zmr.LearningFiles.MyJavaTests.javaTests;
  * @Email zhumengren@sinosoft.com
  * @Version 1.0
  **/
-public class MyTest02 {
-    public static void main(String[] args) {
-        Test.aMethod();
-        int j = Test.aMethod();
-        System.out.println(j);
-    }
-}
+//public class MyTest02 {
+//    public static void main(String[] args) {
+//        Test.aMethod();
+//        int j = Test.aMethod();
+//        System.out.println(j);
+//    }
+//}
