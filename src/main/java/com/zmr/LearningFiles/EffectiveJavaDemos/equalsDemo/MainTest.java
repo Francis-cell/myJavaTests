@@ -1,5 +1,7 @@
 package com.zmr.LearningFiles.EffectiveJavaDemos.equalsDemo;
 
+import java.math.BigInteger;
+
 /**
  * @Author franciszmr
  * @Date 2023/12/6 23:44
@@ -11,6 +13,9 @@ public class MainTest {
         Animal animal = new Animal("abc");
         Dog dog = new Dog("abc", "Labrador");
         boolean equals = animal.equals(dog);
+//        boolean equals = dog.equals(animal);
         System.out.println(equals);
+
+        BigInteger bigInteger = new BigInteger(String.valueOf(10));
     }
 }

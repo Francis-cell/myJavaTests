@@ -37,9 +37,14 @@ public class Dog extends Animal{
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+//        if (o == null || getClass() != o.getClass()) {
+//            return false;
+//        }
+
+        if (!(o instanceof Dog)) {
             return false;
         }
+
         Dog dog = (Dog) o;
         return Objects.equals(breed, dog.breed);
     }
