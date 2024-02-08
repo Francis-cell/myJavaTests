@@ -21,10 +21,10 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="MyJavaTests" options="-parameters" />
       <module name="NettyClientLearningDemo" options="-parameters" />
-      <module name="NettyClientLearningDemos" options="" />
+      <module name="NettyClientLearningDemos" options="-parameters" />
       <module name="NettyLearningDemo" options="" />
-      <module name="NettyServerLearningDemo" options="" />
-      <module name="myJavaTest" options="-parameters" />
+      <module name="NettyServerLearningDemo" options="-parameters" />
+      <module name="myJavaTest" options="" />
     </option>
   </component>
 </project>

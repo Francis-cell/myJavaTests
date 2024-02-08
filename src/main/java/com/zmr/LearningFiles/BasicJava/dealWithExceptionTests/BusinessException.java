@@ -2,6 +2,8 @@ package main.java.com.zmr.LearningFiles.BasicJava.dealWithExceptionTests;
 
 import main.java.com.zmr.LearningFiles.BasicJava.dealWithExceptionTests.interfaces.IResponseEnum;
 
+import main.java.com.zmr.LearningFiles.BasicJava.dealWithExceptionTests.BaseException;
+
 /**
  * @ClassName BusinessException
  * @Description 自定义异常(封装常见异常处理)【业务异常】
