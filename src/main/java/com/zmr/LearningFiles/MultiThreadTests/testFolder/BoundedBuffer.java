@@ -32,6 +32,11 @@ public class BoundedBuffer<E> {
         return availableSpaces.availablePermits() == 0;
     }
 
+    /**
+     * <p> 放入元素 </p>
+     * @param x
+     * @throws InterruptedException
+     */
     public void put(E x) throws InterruptedException {
         // 剩余空间-信号量值 - 1
         availableSpaces.acquire();
@@ -41,6 +46,11 @@ public class BoundedBuffer<E> {
         availableItems.release();
     }
 
+    /**
+     * <p> 移除一个元素 </p>
+     * @return
+     * @throws InterruptedException
+     */
     public E take() throws InterruptedException {
         // 元素-信号量值 - 1
         availableItems.acquire();
