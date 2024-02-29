@@ -160,26 +160,31 @@ public class MergeSort {
     }
     
     public static void main(String[] args) {
-        int testTime = 500000;
-        int maxSize = 100;
-        int maxValue = 100;
-        System.out.println("测试开始！");
-        for (int i = 0; i < testTime; i++) {
-            // 初始化随机数组
-            // 拷贝一份数组，并分别进行验证，看两者的结果是否一样
-            int[] arr1 = generateRandomArray(maxSize, maxValue);
-            int[] arr2 = copyArray(arr1);
+        int[] arr = new int[] {301, 784, 354};
 
-            mergeSort1(arr1);
-            mergeSort2(arr2);
+        // 非递归-归并排序实现
+        mergeSort2(arr);
 
-            if (!isEqual(arr1, arr2)) {
-                System.out.println("出错了！");
-                printArray(arr1);
-                printArray(arr2);
-                break;
-            }
-        }
-        System.out.println("测试结束！");
+    //     int testTime = 500000;
+    //     int maxSize = 100;
+    //     int maxValue = 100;
+    //     System.out.println("测试开始！");
+    //     for (int i = 0; i < testTime; i++) {
+    //         // 初始化随机数组
+    //         // 拷贝一份数组，并分别进行验证，看两者的结果是否一样
+    //         int[] arr1 = generateRandomArray(maxSize, maxValue);
+    //         int[] arr2 = copyArray(arr1);
+    //
+    //         mergeSort1(arr1);
+    //         mergeSort2(arr2);
+    //
+    //         if (!isEqual(arr1, arr2)) {
+    //             System.out.println("出错了！");
+    //             printArray(arr1);
+    //             printArray(arr2);
+    //             break;
+    //         }
+    //     }
+    //     System.out.println("测试结束！");
     }
 }

@@ -33,6 +33,13 @@ public class Main {
         // String b = "True".equals(a) ? a : "False";
         // System.out.println(b);
 
-        System.out.println(incrementValue());
+        // System.out.println(incrementValue());
+
+        Double a = null;
+        if (a instanceof Number) {
+            System.out.println("a");
+        } else {
+            System.out.println("b");
+        }
     }
 }
