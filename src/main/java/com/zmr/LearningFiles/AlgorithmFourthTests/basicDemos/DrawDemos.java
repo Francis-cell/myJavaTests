@@ -33,6 +33,10 @@ public class DrawDemos {
         for (int i = 0; i < N; i++) {
             a[i] = StdRandom.random();
         }
+        for (int i = 0; i < a.length; i++) {
+            System.out.printf(a[i] + ", ");
+        }
+        System.out.println();
         for (int i = 0; i < N; i++) {
             double x = 1.0 * i / N;
             double y = a[i] / 2.0;
@@ -80,7 +84,7 @@ public class DrawDemos {
 
     public static void main(String[] args) {
         // drawFun();
-        // drawRandomArr();
-        drawSortedRandomArr();
+        drawRandomArr();
+        // drawSortedRandomArr();
     }
 }

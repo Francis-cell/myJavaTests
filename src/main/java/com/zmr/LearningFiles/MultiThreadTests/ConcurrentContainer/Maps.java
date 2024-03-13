@@ -1,6 +1,5 @@
 package com.zmr.LearningFiles.MultiThreadTests.ConcurrentContainer;
 
-import main.java.com.zmr.LearningFiles.MyJavaTests.javaTests.MyTest19;
 
 import java.util.Collections;
 import java.util.HashMap;

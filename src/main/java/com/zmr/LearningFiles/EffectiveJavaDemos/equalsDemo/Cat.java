@@ -1,7 +1,5 @@
 package com.zmr.LearningFiles.EffectiveJavaDemos.equalsDemo;
 
-import main.java.com.zmr.LearningFiles.MyJavaTests.javaTests.MyTest19;
-
 import java.util.Objects;
 
 /**

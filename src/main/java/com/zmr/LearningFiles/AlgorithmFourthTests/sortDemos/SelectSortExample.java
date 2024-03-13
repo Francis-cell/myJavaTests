@@ -17,8 +17,8 @@ public class SelectSortExample {
                 if (SortAboutMethods.less(a[j], a[min])) {
                     min = j;
                 }
-                SortAboutMethods.exchange(a, i, min);
             }
+            SortAboutMethods.exchange(a, i, min);
         }
     }
 }
