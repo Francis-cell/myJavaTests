@@ -18,84 +18,41 @@ public class GenerateParentheses {
      * n >= numLeft >= numRight
      */
     public static List<String> generateParenthesis(int n) {
-        if (n == 0) {
-            return null;
-        }
         List<String> ans = new ArrayList<>();
-        // 用于递归尝试的一个临时数组
-        int[] INTS = new int[n * 2];
-        // 当前正在执行填入的元素下标
-        int currentIndex = 0;
-        // 左括号的数量
-        int numLeft = 0;
-        // 右括号的数量
-        int numRight = 0;
-        dfs(ans, n, numLeft, numRight, INTS, currentIndex);
+        if (n == 0) {
+            return ans;
+        }
+        dfs("", n, n, ans);
         return ans;
     }
 
-    public static void dfs(List<String> ans, int n, int numLeft, int numRight, int[] INTS, int currentIndex) {
-        // 结束条件
-        if (numLeft < numRight || numLeft > n || numRight == n || currentIndex == INTS.length) {
-            String str = convertArrToString(INTS);
-
-            // 如果没存在，则添加
-            if (!ans.contains(str)) {
-                ans.add(str);
-            }
+    /**
+     *
+     * @param curStr 当前递归的结果
+     * @param numLeft 左括号还有多少个可以使用
+     * @param numRight 右括号还有多少个可以使用
+     * @param ans 结果集
+     */
+    public static void dfs(String curStr, int numLeft, int numRight, List<String> ans) {
+        // 因为每一次尝试，都使用新的字符串变量，所以无需回溯，
+        // 在递归终止的时候，直接将他们添加到结果集即可
+        if (numLeft == 0 && numRight == 0) {
+            ans.add(curStr);
             return;
         }
 
-        // 最开始只能是左括号
-        if (numLeft == 0) {
-            INTS[currentIndex] = 1;
-            currentIndex++;
-            numLeft++;
-            dfs(ans, n, numLeft, numRight, INTS, currentIndex);
-        } else {
-            for (String str : STRINGS) {
-                // 右括号已经到达数量极限，则直接结束
-                if (numRight == n) {
-                    break;
-                }
-                // 左括号已经到达极限，只能再添加右括号
-                else if (numLeft == n) {
-                    INTS[currentIndex] = 2;
-                    numRight++;
-                    currentIndex++;
-                }
-                // 其他条件，则左括号或者右括号都可以往里面添加
-                else {
-                    // 计数增加
-                    if ("(".equals(str)) {
-                        INTS[currentIndex] = 1;
-                        numLeft++;
-                    } else {
-                        INTS[currentIndex] = 2;
-                        numRight++;
-                    }
-                    currentIndex++;
-                }
-                dfs(ans, n, numLeft, numRight, INTS, currentIndex);
-            }
+        // 剪枝
+        if (numLeft > numRight) {
+            return;
         }
-    }
 
-    /**
-     * 将整型数组转换为字符串
-     * @param arr
-     * @return
-     */
-    private static String convertArrToString(int[] arr) {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == 1) {
-                sb.append("(");
-            } else {
-                sb.append(")");
-            }
+        if (numLeft > 0) {
+            dfs(curStr + "(", numLeft - 1, numRight, ans);
         }
-        return sb.toString();
+
+        if (numRight > 0) {
+            dfs(curStr + ")", numLeft, numRight - 1, ans);
+        }
     }
 
     public static void main(String[] args) {
