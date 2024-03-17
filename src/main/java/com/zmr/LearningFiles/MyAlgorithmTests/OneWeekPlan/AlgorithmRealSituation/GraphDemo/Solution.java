@@ -1,4 +1,4 @@
-package com.zmr.LearningFiles.MyAlgorithmTests.AlgorithmRealSituation.GraphDemo;
+package com.zmr.LearningFiles.MyAlgorithmTests.OneWeekPlan.AlgorithmRealSituation.GraphDemo;
 
 public class Solution {
     private static final int[][] DIRECTIONS = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};

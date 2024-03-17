@@ -1,4 +1,4 @@
-package com.zmr.LearningFiles.MyAlgorithmTests.AlgorithmRealSituation.SortDemo;
+package com.zmr.LearningFiles.MyAlgorithmTests.OneWeekPlan.AlgorithmRealSituation.SortDemo;
 
 import java.util.Arrays;
 

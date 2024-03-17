@@ -1,4 +1,4 @@
-package com.zmr.LearningFiles.MyAlgorithmTests.AlgorithmRealSituation.GraphDemo;
+package com.zmr.LearningFiles.MyAlgorithmTests.OneWeekPlan.AlgorithmRealSituation.GraphDemo;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
