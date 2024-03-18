@@ -6,15 +6,20 @@ import com.zmr.LearningFiles.BooksReading.AlgorithmFourthTests.MethodsFromBook.S
 
 public class Start01 {
     public static void main(String[] args) {
-        ST<String, Integer> st = new ST<>();
+        // ST<String, Integer> st = new ST<>();
+        //
+        // for (int i = 0; !StdIn.isEmpty(); i++) {
+        //     String key = StdIn.readString();
+        //     st.put(key, i);
+        // }
+        //
+        // for (String s : st.keys()) {
+        //     StdOut.println(s + " " + st.get(s));
+        // }
 
-        for (int i = 0; !StdIn.isEmpty(); i++) {
-            String key = StdIn.readString();
-            st.put(key, i);
-        }
-
-        for (String s : st.keys()) {
-            StdOut.println(s + " " + st.get(s));
+        while (!StdIn.isEmpty()) {
+            String key = StdIn.readLine();
+            StdOut.println(key + " ");
         }
     }
 }

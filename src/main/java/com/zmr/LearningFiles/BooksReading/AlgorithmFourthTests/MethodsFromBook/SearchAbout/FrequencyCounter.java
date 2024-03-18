@@ -17,7 +17,7 @@ package com.zmr.LearningFiles.BooksReading.AlgorithmFourthTests.MethodsFromBook.
  *  % java FrequencyCounter 1 < tinyTale.txt
  *  it 10
  *
- *  % java FrequencyCounter 8 < tale.txt
+ *  % java FrequencyCounter 8 < tale.txt.txt
  *  business 122
  *
  *  % java FrequencyCounter 10 < leipzig1M.txt
