@@ -48,6 +48,7 @@ public class FullGC_Problem01 {
             }, 2, 3, TimeUnit.SECONDS);
         });
     }
+
     private static List<CardInfo> getAllCardInfo() { 
         List<CardInfo> taskList = new ArrayList<>();
         

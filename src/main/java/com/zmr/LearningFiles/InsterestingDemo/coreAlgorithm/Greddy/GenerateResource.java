@@ -3,7 +3,6 @@ package com.zmr.LearningFiles.InsterestingDemo.coreAlgorithm.Greddy;
 import com.zmr.LearningFiles.InsterestingDemo.entity.Item;
 import com.zmr.LearningFiles.InsterestingDemo.entity.Monster;
 import com.zmr.LearningFiles.InsterestingDemo.entity.Player;
-import com.zmr.LearningFiles.InsterestingDemo.entity.Skill;
 
 import java.util.*;
 
@@ -19,20 +18,17 @@ public class GenerateResource {
      * @param items 要补给的资源
      * @param player 玩家
      * @param itemNum 补给品数量
+     * @param playerHurt 玩家可打出的伤害值
      * @param seed 种子，用来影响生成的怪物数量和补给品数量，避免玩家始终不会被干掉
      * @return
      */
-    public static Object[] greedyKnapsack(Monster[] monsters, Item[] items, Player player, int itemNum, int seed) {
+    public static Object[] greedyKnapsack(Monster[] monsters, Item[] items, Player player, int itemNum,
+                                          int playerHurt, int seed) {
         Object[] ans = new Object[2];
         // 生成的怪物信息映射
-        HashMap<String, Object> monsterMap = new HashMap<>();
+        HashMap<String, Object> monsterMap;
         // 生成的补给品信息映射
-        HashMap<String, Object> itemMap = new HashMap<>();
-        // 本轮生成的怪物组合信息
-        List<Monster> generatedMonsters = new ArrayList<>();
-        // 本轮生成的补给品组合信息
-        List<Item> generatedItems = new ArrayList<>();
-
+        HashMap<String, Object> itemMap;
 
         // 根据当前玩家的伤害来计算 monsters 中的可承受伤害数量，进而将各种怪物进行排序
         Arrays.sort(monsters, Comparator.comparing(Monster::getPlayerGetHurtCount).reversed());
@@ -40,13 +36,40 @@ public class GenerateResource {
         // 根据物品可回复的血量进行排序
         Arrays.sort(items, Comparator.comparing(Item::getAddPlayerBlood));
 
+        // 随机怪物
+        monsterMap = generateRandomMonsters(monsters, player, playerHurt, seed);
+        // 随机补给品
+        itemMap = generateRandomItems(items, itemNum, seed);
+
+        ans[0] = monsterMap;
+        // 生成的补给物品信息列表
+        ans[1] = itemMap;
+
+        return ans;
+    }
+
+    /**
+     * 随机怪物
+     * @param monsters 可选怪物列表
+     * @param player 玩家
+     * @param playerHurt 玩家伤害[外部可选的]
+     * @param seed 随机种子
+     * @return
+     */
+    private static HashMap<String, Object> generateRandomMonsters(Monster[] monsters, Player player, int playerHurt,
+                                                                 int seed) {
+        // 生成的怪物信息映射
+        HashMap<String, Object> monsterMap = new HashMap<>();
+        // 本轮生成的怪物组合信息
+        HashMap<String, Integer> generatedMonstersMap = new HashMap<>();
+
+
         // 玩家剩余的血量信息
         int playerBlood = player.getPlayerBlood();
+        // 当前玩家的防御值信息
+        int playerRecovery = player.getPlayerRecovery();
         // 已生成怪物数量
         int currentMonsterNum = 0;
-        // 剩余可生成的补给品数量
-        int currentItemNum = itemNum;
-
 
         // 一、随机怪物信息
         // 找到刚好杀不掉玩家的怪物组合（近似解）
@@ -58,18 +81,88 @@ public class GenerateResource {
         for (int i = 0; i < monsters.length; i++) {
             // 首先找到刚好杀不掉玩家的当前怪物的最大数量
             int monsterHurt = monsters[i].getMonsterHurt();
-            int tmpNum = playerBlood % monsterHurt == 0 ? (playerBlood / monsterHurt) - 1 : (playerBlood / monsterHurt);
+            // 设计01：所有的敌人只会攻击一次的情况下（显然不太可能）
+            // int tmpNum = playerBlood % monsterHurt == 0 ? (playerBlood / monsterHurt) - 1 : (playerBlood / monsterHurt);
+            // 设计02：需要怪物被玩家打击的次数，即玩家会受到玩家攻击次数 - 1 次伤害
+            // int playerHurtNum = (monsters[i].getMonsterBlood() % playerHurt == 0) ?
+            //         (monsters[i].getMonsterBlood() / playerHurt) - 1 : (monsters[i].getMonsterBlood() / playerHurt);
+            // int tmpNum = (playerBlood % (monsterHurt * playerHurtNum)  == 0) ?
+            //         (playerBlood / (monsterHurt * playerHurtNum)) - 1 : (playerBlood / (monsterHurt * playerHurtNum));
+            // 设计03：怪物+护盾的防御值信息、玩家引入护甲值设定
+            // 当前怪物的血量
+            int monsterBlood = monsters[i].getMonsterBlood();
+            // 当前怪物的防御值
+            int monsterRecovery = monsters[i].getMonsterRecovery();
+            // 玩家 --> 当前怪物 (伤害值)
+            int playerToMonsterHurt = (playerHurt - monsterRecovery) <= 0 ? 0 : (playerHurt - monsterRecovery);
+            // 当前怪物 --> 玩家 (伤害值)
+            int monsterToPlayerHurt = (monsterHurt - playerRecovery) <= 0 ? 0 : (monsterHurt - playerRecovery);
+            // 不要生成当前玩家根本打不动的怪
+            if (playerToMonsterHurt == 0) {
+                continue;
+            }
+            int playerHurtNum = (monsterBlood % playerToMonsterHurt == 0) ?
+                    (monsterBlood / playerToMonsterHurt) - 1 :
+                    (monsterBlood / playerToMonsterHurt);
+            // 如果怪物对玩家伤害为0，或者怪物会被玩家一击毙命，则怪物的数量直接使用种子随机生成即可
+            int tmpNum = (monsterToPlayerHurt == 0 || (playerToMonsterHurt >= monsterBlood)) ?
+                    generateRandomInt(seed, seed) :
+                    (playerBlood % (monsterToPlayerHurt * playerHurtNum)  == 0) ?
+                            (playerBlood / (monsterToPlayerHurt * playerHurtNum)) - 1 :
+                            (playerBlood / (monsterToPlayerHurt * playerHurtNum));
             // 随机“当前怪物的数量”
             int currentMonsterCount = generateRandomInt(tmpNum, seed);
-            // 更新“已生成怪物数量”
-            currentMonsterNum += currentMonsterCount;
+            // // 更新“已生成怪物数量”
+            // currentMonsterNum += currentMonsterCount;
             // 玩家剩余的血量信息
-            playerBlood -= currentMonsterCount * monsterHurt;
+            playerBlood -= currentMonsterCount * monsterToPlayerHurt;
             // 将怪物放置到“本轮生成的怪物组合信息”中
-            for (int j = 0; j < currentMonsterCount; j++) {
-                generatedMonsters.add(monsters[i]);
+            if (currentMonsterCount != 0) {
+                generatedMonstersMap.put(monsters[i].getMonsterName(), currentMonsterCount);
             }
         }
+
+        // 遍历已生成的各种怪物的数量，然后再做一次随机，随机范围在已生成数值的 25% - 75% 之间，如果不足1，则设置为1
+        for (Map.Entry<String, Integer> entry : generatedMonstersMap.entrySet()) {
+            String monster = entry.getKey();
+            Integer count = entry.getValue();
+
+            // 数量再进行一次随机 (随机范围在已生成数值的 25% - 75% 之间，如果不足1，则设置为1)
+            int tmpRandomNum = count;
+            int minNum = (int)(0.25 * tmpRandomNum);
+            int maxNum = (int)(0.75 * tmpRandomNum);
+            tmpRandomNum = (int)(minNum + (maxNum - minNum) * Math.random());
+            // 更新后为0的数据，最低保证为1
+            if (tmpRandomNum == 0) {
+                tmpRandomNum = 1;
+            }
+            // 使用新的值
+            generatedMonstersMap.put(monster, tmpRandomNum);
+            // 更新
+            currentMonsterNum += tmpRandomNum;
+        }
+
+        // 本轮生成的怪物映射信息
+        monsterMap.put("monsterNum", currentMonsterNum);
+        monsterMap.put("monsterMap", generatedMonstersMap);
+
+        return monsterMap;
+    }
+
+    /**
+     * 随机补给品
+     * @param items
+     * @param itemNum
+     * @param seed
+     * @return
+     */
+    private static HashMap<String, Object> generateRandomItems(Item[] items, int itemNum, int seed) {
+        // 本轮生成的补给品组合信息
+        List<Item> generatedItems = new ArrayList<>();
+        // 剩余可生成的补给品数量
+        int currentItemNum = itemNum;
+        // 生成的补给品信息映射
+        HashMap<String, Object> itemMap = new HashMap<>();
 
         // 二、随机补给品信息
         for (int i = 0; i < items.length; i++) {
@@ -89,17 +182,11 @@ public class GenerateResource {
             }
         }
 
-        // 本轮生成的怪物映射信息
-        monsterMap.put("monsterNum", currentMonsterNum);
-        monsterMap.put("monsterList", generatedMonsters);
         // 本轮生成的补给品映射信息
         itemMap.put("itemNum", itemNum-currentItemNum);
         itemMap.put("itemList", generatedItems);
 
-        ans[0] = monsterMap;
-        // 生成的补给物品信息列表
-        ans[1] = itemMap;
-        return ans;
+        return itemMap;
     }
 
     /**
@@ -132,7 +219,7 @@ public class GenerateResource {
      * @param lists
      * @param <E>
      */
-    private static <E> void printList(List<E> lists) {
+    public static <E> void printList(List<E> lists) {
         // 用于记录当前怪物或者补给品的名称以及对应的数量信息
         HashMap<String, Integer> map = new HashMap<>();
         String tmpName = "";
@@ -153,42 +240,20 @@ public class GenerateResource {
         System.out.println(map);
     }
 
-    public static void main(String[] args) {
-        // 技能
-        Skill[] skills = {
-              new Skill(1, "普攻", 2),
-              new Skill(2, "火球", 5),
-              new Skill(3, "冰刺", 3)
-        };
-        // 玩家信息
-        Player p = new Player(12, skills, 30);
-        // 怪物列表
-        Monster[] monsters = {
-                new Monster(1, "史莱姆", 1, 5, p.getSkills()[0].getSkillHurt()),
-                new Monster(2, "树桩怪", 3, 10, p.getSkills()[0].getSkillHurt()),
-                new Monster(3, "火怪", 5, 3, p.getSkills()[0].getSkillHurt())
-        };
-        // 补给品列表
-        Item[] items = {
-                new Item(1, "口香糖", 3),
-                new Item(2, "矿物水", 5),
-                new Item(3, "面包", 10)
-        };
-        // 补给品数量
-        int itemNum = (int)(Math.random() * (6 + 1));
-        // 随机种子
-        int seed = (int)(Math.random() * (itemNum + 1));
-        // 经过“多重背包”生成本轮需要生成的怪物和补给品信息
-        Object[] ans = greedyKnapsack(monsters, items, p, itemNum, seed);
-        // 生成的怪物信息
-        HashMap<String, Object> MonsterMap = (HashMap<String, Object>)ans[0];
-        System.out.println("当前生成的怪物数量为：" + MonsterMap.get("monsterNum"));
-        System.out.println("当前生成的怪物列表为：");
-        printList((ArrayList<Monster>)MonsterMap.get("monsterList"));
-        // 生成的补给品信息
-        HashMap<String, Object> ItemMap = (HashMap<String, Object>)ans[1];
-        System.out.println("当前生成的补给品数量为：" + ItemMap.get("itemNum"));
-        System.out.println("当前生成的补给品列表为：");
-        printList((ArrayList<Item>)ItemMap.get("itemList"));
+    /**
+     * 打印 Map 中的元素
+     * @param map
+     * @param <K>
+     * @param <V>
+     */
+    public static <K, V> void printMap(Map<K, V> map) {
+        System.out.println("{");
+        for (Map.Entry<K, V> entry : map.entrySet()) {
+            K key = entry.getKey();
+            V value = entry.getValue();
+            String tmpName = (String) key;
+            System.out.println(tmpName + ": " + value);
+        }
+        System.out.println("}");
     }
 }

@@ -1,5 +1,8 @@
 package com.zmr.LearningFiles.BooksReading.AlgorithmFourthTests.searchDemos;
 
+import java.util.NoSuchElementException;
+import com.zmr.LearningFiles.BooksReading.AlgorithmFourthTests.MethodsFromBook.BasicAbout.Queue;
+
 public class BinarySearchST<Key extends Comparable<Key>, Value> {
     private Key[] keys;
     private Value[] vals;
@@ -99,5 +102,69 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 
         keys = tmpKey;
         vals = tmpValue;
+    }
+
+    /**
+     * Returns the smallest key in this symbol table greater than or equal to {@code key}.
+     * @param key
+     * @return
+     */
+    public Key ceiling(Key key) {
+        if (key == null) {
+            throw new IllegalArgumentException("argument to ceiling is null!");
+        }
+        int i = rank(key);
+        // 找到的元素位于整个结构的最大值的位置，所以必然没有再大于它的值了
+        if (i == N) {
+            throw new NoSuchElementException("argument to ceiling is too large!");
+        } else {
+            return keys[i];
+        }
+    }
+
+    /**
+     * Returns the largest key in this symbol table less than or equal to {@code key}.
+     * @param key
+     * @return
+     */
+    public Key floor(Key key) {
+        if (key == null) {
+            throw new IllegalArgumentException("argument to floor is null!");
+        }
+        int i = rank(key);
+        // 找到了指定的 key 的元素
+        if (i < N && key.compareTo(keys[i]) == 0) {
+            return keys[i];
+        }
+        // 找到的元素位于下标为 0 的位置，因此必然没有再小于它的元素了
+        if (i == 0) {
+            throw new NoSuchElementException("argument to floor is too small!");
+        } else {
+            return keys[i - 1];
+        }
+    }
+
+    /**
+     * Does this symbol table contain the given key?
+     *
+     * @param  key the key
+     * @return {@code true} if this symbol table contains {@code key} and
+     *         {@code false} otherwise
+     * @throws IllegalArgumentException if {@code key} is {@code null}
+     */
+    public boolean contains(Key key) {
+        if (key == null) throw new IllegalArgumentException("argument to contains() is null");
+        return get(key) != null;
+    }
+
+    public Iterable<Key> keys(Key low, Key high) {
+        Queue<Key> q = new Queue<Key>();
+        for (int i = rank(low); i < rank(high); i++) {
+            q.enqueue(keys[i]);
+        }
+        if (contains(high)) {
+            q.enqueue(keys[rank(high)]);
+        }
+        return q;
     }
 }

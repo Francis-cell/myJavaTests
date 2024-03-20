@@ -34,9 +34,10 @@ public class Player {
     /** 血量 */
     private int playerBlood;
 
-    public Player(int playerId, Skill[] skills, int playerBlood) {
+    public Player(int playerId, Skill[] skills, int playerBlood, int playerRecovery) {
         this.playerId = playerId;
         this.skills = skills;
         this.playerBlood = playerBlood;
+        this.playerRecovery = playerRecovery;
     }
 }

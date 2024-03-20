@@ -9,10 +9,9 @@ package com.zmr.LearningFiles.OwnTests.MyJavaTests.javaTests;
  * @Version 1.0
  **/
 public class Test {
-    //static int i;
-    public static int i;
-    public static int aMethod() {
-        i ++;
-        return i;
+    public static void main(String[] args) {
+        // int a = 0;
+        // int b = 10;
+        // System.out.println(b % a);
     }
 }

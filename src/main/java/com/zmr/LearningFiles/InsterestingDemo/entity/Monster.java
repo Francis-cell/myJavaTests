@@ -37,7 +37,7 @@ public class Monster {
         this.monsterBlood = monsterBlood;
     }
 
-    public Monster(int monsterId, String monsterName, int monsterHurt, int monsterBlood, int playerHurt) {
+    public Monster(int monsterId, String monsterName, int monsterHurt, int monsterBlood, int monsterRecovery, int playerHurt) {
         // 当前怪物可承受当前玩家伤害的次数
         int playerGetHurtCount = monsterBlood % playerHurt == 0 ?
                 monsterBlood / playerHurt : monsterBlood / playerHurt + 1;
@@ -48,6 +48,7 @@ public class Monster {
         this.monsterName = monsterName;
         this.monsterHurt = monsterHurt;
         this.monsterBlood = monsterBlood;
+        this.monsterRecovery = monsterRecovery;
     }
 
     @Override
