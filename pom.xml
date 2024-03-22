@@ -58,6 +58,13 @@
             <artifactId>guava</artifactId>
             <version>30.1.1-jre</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.yzs</groupId>
+            <artifactId>auto-update-starter</artifactId>
+            <version>4.7-medicare</version>
+        </dependency>
+
         <dependency>
             <!-- this is needed or IntelliJ gives junit.jar or junit-platform-launcher:1.3.2 not found errors -->
             <groupId>org.junit.platform</groupId>
