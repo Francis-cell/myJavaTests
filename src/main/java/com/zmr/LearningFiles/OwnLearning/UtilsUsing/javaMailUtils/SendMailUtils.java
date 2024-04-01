@@ -20,7 +20,7 @@
 // * @Description Java 邮件发送工具类
 // * @Author zhumengren
 // * @Date 2022/4/15 17:32
-// * @Email zhumengren@sinosoft.com
+//
 // * @Version 1.0
 // **/
 //public class SendMailUtils {

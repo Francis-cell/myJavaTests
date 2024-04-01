@@ -7,7 +7,7 @@ import com.zmr.LearningFiles.OwnLearning.BasicJava.genericsTest.genericsClass.Pe
  * @Description 泛型测试案例02
  * @Author zhumengren
  * @Date 2022/8/25 8:31
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class MyGenericsTest02 {

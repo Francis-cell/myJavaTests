@@ -8,7 +8,7 @@ import java.text.NumberFormat;
  * @Description BigDecimal测试类
  * @Author zhumengren
  * @Date 2022/4/14 9:58
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class BigDecimalTest01 {

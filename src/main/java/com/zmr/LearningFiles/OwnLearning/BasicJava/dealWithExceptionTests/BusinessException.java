@@ -7,7 +7,7 @@ import com.zmr.LearningFiles.OwnLearning.BasicJava.dealWithExceptionTests.interf
  * @Description 自定义异常(封装常见异常处理)【业务异常】
  * @Author zhumengren
  * @Date 2022/3/28 15:25
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class BusinessException extends BaseException {

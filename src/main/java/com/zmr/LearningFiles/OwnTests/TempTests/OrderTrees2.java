@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * @Description 自定义二叉树
  * @Author zhumengren
  * @Date 2023/2/9 13:11
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class OrderTrees2<T> {

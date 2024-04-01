@@ -7,7 +7,7 @@ import java.util.List;
  * @Description 自定义泛型测试类01
  * @Author zhumengren
  * @Date 2022/4/19 9:00
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class GenericTest01 {

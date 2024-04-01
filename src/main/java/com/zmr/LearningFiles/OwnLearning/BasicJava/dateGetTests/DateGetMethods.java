@@ -13,7 +13,7 @@ import java.util.Date;
  * @Description 时间获取方法
  * @Author zhumengren
  * @Date 2022/4/13 17:41
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class DateGetMethods {

@@ -7,7 +7,7 @@
 // * @Description 自定义Asserts测试类
 // * @Author zhumengren
 // * @Date 2022/3/28 14:18
-// * @Email zhumengren@sinosoft.com
+//
 // * @Version 1.0
 // **/
 //public class Test01 {

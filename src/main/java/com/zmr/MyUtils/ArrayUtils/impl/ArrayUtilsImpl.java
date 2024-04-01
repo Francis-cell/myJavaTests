@@ -7,6 +7,14 @@ import java.lang.reflect.Array;
 
 @Component
 public class ArrayUtilsImpl implements ArrayUtils {
+    private static final ArrayUtilsImpl INSTANCE  = new ArrayUtilsImpl();
+
+    private ArrayUtilsImpl() {}
+
+    public static ArrayUtilsImpl getInstance() {
+        return INSTANCE;
+    }
+
     /**
      * {@inheritDoc}
      * @param clazz
@@ -33,5 +41,35 @@ public class ArrayUtilsImpl implements ArrayUtils {
             }
         }
         return ans;
+    }
+
+    /**
+     * {@inheritDoc}
+     * @param arr 要参与检查的数组
+     * @param ele 要被检查是否存在的元素
+     * @return
+     * @param <T>
+     */
+    @Override
+    public <T> boolean arrContainsElement(T[] arr, T ele) {
+        if (ele == null) {
+            return false;
+        }
+        for (T e : arr) {
+            // 基本元素类型
+            if (e instanceof Integer || e instanceof Double) {
+                if (ele == e) {
+                    return true;
+                }
+            }
+            // 字符串类型
+            else if (e instanceof String) {
+                if (ele.equals(e)) {
+                    return true;
+                }
+            }
+            // TODO - 封装类型的判断
+        }
+        return false;
     }
 }

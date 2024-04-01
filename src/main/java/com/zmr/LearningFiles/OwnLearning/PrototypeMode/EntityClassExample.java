@@ -8,7 +8,7 @@
 // * @Description 原型模式测试实体类
 // * @Author zhumengren
 // * @Date 2022/10/20 10:25
-// * @Email zhumengren@sinosoft.com
+//
 // * @Version 1.0
 // **/
 //public class EntityClassExample implements Cloneable {

@@ -5,7 +5,7 @@ package com.zmr.LearningFiles.OwnLearning.MyLeetCodeTests.My2022Lists.D11_10.Sol
  * @Description TODO
  * @Author zhumengren
  * @Date 2022/11/10 12:43
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class BrowserHistory {

@@ -5,7 +5,7 @@ package com.zmr.LearningFiles.OwnLearning.BasicJava.genericsTest.genericsClass;
  * @Description 泛型类Person的定义
  * @Author zhumengren
  * @Date 2022/8/25 17:25
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class Persons <T>{

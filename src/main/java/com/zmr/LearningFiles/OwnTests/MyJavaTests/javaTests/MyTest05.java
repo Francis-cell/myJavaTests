@@ -5,7 +5,7 @@ package com.zmr.LearningFiles.OwnTests.MyJavaTests.javaTests;
  * @Description Java测试05
  * @Author zhumengren
  * @Date 2022/4/8 9:48
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class MyTest05 {

@@ -7,7 +7,7 @@ import java.util.Arrays;
  * @Description TODO
  * @Author zhumengren
  * @Date 2023/1/3 8:17
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class MyInsertionSort {

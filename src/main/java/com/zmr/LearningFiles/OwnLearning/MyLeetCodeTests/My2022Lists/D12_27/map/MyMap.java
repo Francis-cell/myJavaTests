@@ -8,7 +8,7 @@ import java.util.List;
  * @Description 自定义实现Map(初始化大小设置为100)
  * @Author zhumengren
  * @Date 2022/12/27 18:24
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class MyMap {

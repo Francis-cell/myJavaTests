@@ -10,7 +10,7 @@ import java.util.Scanner;
  * @Description Socket通信服务端
  * @Author zhumengren
  * @Date 2022/10/23 13:50
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class MyServerTest {

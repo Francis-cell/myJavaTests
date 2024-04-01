@@ -5,7 +5,7 @@ package com.zmr.LearningFiles.OwnLearning.BasicJava.basicDataStruct.ArrayStruct;
  * @Description ArrayTest--初始化Array
  * @Author zhumengren
  * @Date 2022/9/8 20:27
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class MyArrayTest01 {

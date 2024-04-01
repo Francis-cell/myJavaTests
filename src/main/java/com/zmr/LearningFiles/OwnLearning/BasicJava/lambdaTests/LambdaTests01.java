@@ -10,7 +10,7 @@
 // * @Description 函数式接口
 // * @Author zhumengren
 // * @Date 2022/3/15 14:41
-// * @Email zhumengren@sinosoft.com
+//
 // * @Version 1.0
 // **/
 //public class LambdaTests01 {

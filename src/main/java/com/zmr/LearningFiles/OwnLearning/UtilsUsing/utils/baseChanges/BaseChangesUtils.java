@@ -7,7 +7,7 @@ import java.util.HashMap;
  * @Description 进制转换工具类
  * @Author zhumengren
  * @Date 2022/4/13 10:17
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class BaseChangesUtils {

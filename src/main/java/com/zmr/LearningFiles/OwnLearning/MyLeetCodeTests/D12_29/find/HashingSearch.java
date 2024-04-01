@@ -7,7 +7,7 @@ import java.util.Map;
  * @Description 哈希查找实现
  * @Author zhumengren
  * @Date 2022/12/29 19:24
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class HashingSearch {

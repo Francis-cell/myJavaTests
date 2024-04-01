@@ -11,7 +11,7 @@ import java.util.stream.Stream;
  * @Description Stream流常用的方法
  * @Author zhumengren
  * @Date 2022/10/13 18:17
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class StreamMethods {

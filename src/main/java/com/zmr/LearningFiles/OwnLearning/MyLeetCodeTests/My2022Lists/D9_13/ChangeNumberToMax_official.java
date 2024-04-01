@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @Description TODO
  * @Author zhumengren
  * @Date 2022/9/14 17:45
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class ChangeNumberToMax_official {

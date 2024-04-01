@@ -7,7 +7,7 @@ import java.math.BigDecimal;
  * @Description 用于高精确处理常用的数学运算
  * @Author zhumengren
  * @Date 2022/4/14 14:40
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class ArithmeticUtils {

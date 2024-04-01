@@ -7,7 +7,7 @@ import java.util.Arrays;
  * @Description 优先队列实现
  * @Author zhumengren
  * @Date 2022/10/16 16:22
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class PriorityQueue {

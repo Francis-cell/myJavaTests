@@ -9,6 +9,14 @@ import java.util.Map;
 
 @Component
 public class PrintUtilsImpl implements PrintUtils {
+    private static final PrintUtilsImpl INSTANCE  = new PrintUtilsImpl();
+
+    private PrintUtilsImpl() {}
+
+    public static PrintUtilsImpl getInstance() {
+        return INSTANCE;
+    }
+
     /**
      * {@inheritDoc}
      * @param lists

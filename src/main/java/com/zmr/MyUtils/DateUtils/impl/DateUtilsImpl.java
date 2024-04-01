@@ -10,6 +10,14 @@ import java.util.Date;
 
 @Component
 public class DateUtilsImpl implements DateUtils {
+    private static final DateUtilsImpl INSTANCE  = new DateUtilsImpl();
+
+    private DateUtilsImpl() {}
+
+    public static DateUtilsImpl getInstance() {
+        return INSTANCE;
+    }
+
     /**
      * {@inheritDoc}
      * @param timeStamp 要转换的时间戳

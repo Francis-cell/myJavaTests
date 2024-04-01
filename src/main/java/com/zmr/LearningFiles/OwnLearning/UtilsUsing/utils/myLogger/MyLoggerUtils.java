@@ -10,7 +10,7 @@ import java.util.logging.Logger;
  * @Description myLogger工具类
  * @Author zhumengren
  * @Date 2022/4/16 21:08
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class MyLoggerUtils {

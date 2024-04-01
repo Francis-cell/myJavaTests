@@ -7,7 +7,7 @@ import com.zmr.LearningFiles.OwnLearning.BasicJava.dealWithExceptionTests.interf
  * @Description 自定义异常的【根异常】
  * @Author zhumengren
  * @Date 2022/3/28 14:47
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class BaseException extends RuntimeException {

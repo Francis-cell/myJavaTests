@@ -5,7 +5,7 @@ package com.zmr.LearningFiles.OwnLearning.BasicJava.genericsTest.entity;
  * @Description Boy实体类
  * @Author zhumengren
  * @Date 2022/8/25 8:28
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class Boy extends Person{

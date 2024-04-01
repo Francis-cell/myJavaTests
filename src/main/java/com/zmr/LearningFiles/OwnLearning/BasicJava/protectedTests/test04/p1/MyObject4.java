@@ -7,7 +7,7 @@ import com.zmr.LearningFiles.OwnLearning.BasicJava.protectedTests.test04.p2.Prot
  * @Description 自定义对象实体类
  * @Author zhumengren
  * @Date 2022/4/18 13:30
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class MyObject4 extends ProtectedTest04 {

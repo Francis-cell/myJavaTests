@@ -5,7 +5,7 @@ package com.zmr.LearningFiles.OwnTests.MyJavaTests.bitOperationTests;
  * @Description 位运算测试类
  * @Author zhumengren
  * @Date 2022/3/25 15:11
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class BitOperationTest {

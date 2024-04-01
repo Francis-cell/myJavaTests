@@ -7,6 +7,14 @@ import java.util.Date;
 
 @Component
 public class CompareUtilsImpl implements CompareUtils {
+    private static final CompareUtilsImpl INSTANCE  = new CompareUtilsImpl();
+
+    private CompareUtilsImpl() {}
+
+    public static CompareUtilsImpl getInstance() {
+        return INSTANCE;
+    }
+
     /**
      * {@inheritDoc}
      * @param v1 要检查的数据

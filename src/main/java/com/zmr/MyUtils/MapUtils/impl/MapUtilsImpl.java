@@ -8,6 +8,14 @@ import java.util.Map;
 
 @Component
 public class MapUtilsImpl implements MapUtils {
+    private static final MapUtilsImpl INSTANCE  = new MapUtilsImpl();
+
+    private MapUtilsImpl() {}
+
+    public static MapUtilsImpl getInstance() {
+        return INSTANCE;
+    }
+
     /**
      * {@inheritDoc}
      * @param originalMap

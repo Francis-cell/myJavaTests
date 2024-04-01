@@ -5,7 +5,7 @@ package com.zmr.LearningFiles.OwnLearning.BasicJava.staticCodeTests;
  * @Description 静态代码块测试
  * @Author zhumengren
  * @Date 2022/4/19 16:55
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class StaticCodesTest {

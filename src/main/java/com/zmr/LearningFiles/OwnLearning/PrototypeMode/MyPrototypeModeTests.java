@@ -5,7 +5,7 @@
 // * @Description 原型模式测试
 // * @Author zhumengren
 // * @Date 2022/10/20 10:24
-// * @Email zhumengren@sinosoft.com
+//
 // * @Version 1.0
 // **/
 //public class MyPrototypeModeTests {

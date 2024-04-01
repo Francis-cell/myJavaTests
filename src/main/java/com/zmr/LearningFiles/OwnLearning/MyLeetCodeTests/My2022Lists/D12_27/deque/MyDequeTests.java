@@ -8,7 +8,7 @@ import java.util.LinkedList;
  * @Description 双向队列Java使用
  * @Author zhumengren
  * @Date 2022/12/27 17:50
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class MyDequeTests {

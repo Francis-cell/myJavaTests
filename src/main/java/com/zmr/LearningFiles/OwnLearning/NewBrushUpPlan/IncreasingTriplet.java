@@ -5,7 +5,7 @@ package com.zmr.LearningFiles.OwnLearning.NewBrushUpPlan;
  * @Description https://leetcode.cn/problems/increasing-triplet-subsequence/?envType=study-plan-v2&envId=leetcode-75
  * @Author zhumengren
  * @Date 2023/6/2 11:49
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public class IncreasingTriplet {

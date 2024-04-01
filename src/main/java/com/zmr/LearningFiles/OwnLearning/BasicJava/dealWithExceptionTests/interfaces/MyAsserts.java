@@ -7,7 +7,7 @@ import com.zmr.LearningFiles.OwnLearning.BasicJava.dealWithExceptionTests.BaseEx
  * @Description 自定义Asserts接口
  * @Author zhumengren
  * @Date 2022/3/28 14:20
- * @Email zhumengren@sinosoft.com
+
  * @Version 1.0
  **/
 public interface MyAsserts {
