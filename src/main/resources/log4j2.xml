@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <!-- 自定义一些变量 -->
+    <Properties>
+<!--        <Property name="LOG_BASE_DIR">D:\myOwnFiles\myJavaTests\src\main\java\com\zmr\my_logs</Property>-->
+        <Property name="LOG_BASE_DIR">my_logs</Property>
+        <!-- Appender在将日志数据写入目标位置之前，一般会将日志数据通过Layout进行格式化。PatternLayout可以使用与C语言printf函数类似
+        的转换模式来指定输出格式。常见的配置如下：
+        - %d{yyyy-MM-dd HH:mm:ss.SSS} : 日志生成时间，输出格式为“年-月-日 时:分:秒.毫秒”
+        - %p : 日志输出格式
+        - %c : logger的名称
+        - %m : 日志内容，即 logger.info("message")
+        - %n : 换行符
+        - %T : 线程号
+        - %L : 日志输出所在行数
+        - %M : 日志输出所在方法名
+        -%xEx: 异常堆栈信息
+        -->
+        <Property name="LOG_PATTERN">[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%t] [%T] [%-5p] [%X{AppName}] [%X{BizUid}] [%c{1.}.%M:%L]  %msg %xEx%n</Property>
+        <Property name="o">[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%t] [%-5p] [%X{BizUid}] %msg %xEx%n</Property>
+        <!-- 单个日志文件最大大小，单位可以是KB, MB or GB -->
+        <Property name="MAX_SINGLE_FILE_SIZE">100MB</Property>
+        <Property name="MAX_ROLLOVER_STRATEGY_LEN">10</Property>
+        <Property name="RETAIN_DAY">P7D</Property>
+    </Properties>
+
+    <!-- 使用Appenders元素可以将日志事件数据写到各种目标位置（目前可以为控制台、文件、多种数据库API、远程套接字服务器、Apache Flume、
+    JMS、远程UNIX Syslog daemon），其内的每个Appender都必须要有一个name属性作为唯一标识，该标识的值在Logger中通过AppenderRef来引
+    用，从而将该Appender配置到该Logger中 -->
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+        <!-- 控制台日志文件 统计请求耗时 -->
+        <RollingFile name="ExceptionLog" fileName="${LOG_BASE_DIR}/exception.log"
+                     filePattern="${LOG_BASE_DIR}/$${date:yyyy-MM-dd}/exception-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies>
+                <!-- <OnStartupTriggeringPolicy /> -->
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="${MAX_SINGLE_FILE_SIZE}" />
+            </Policies>
+            <!-- DefaultRolloverStrategy属性如不设置，则默认为最多同一文件夹下7个文件，这里设置了10 -->
+            <DefaultRolloverStrategy max="${MAX_ROLLOVER_STRATEGY_LEN}">
+                <!-- maxDepth 定义了遍历的层级，1表示 bashPath 下的所有文件 -->
+                <Delete basePath="${LOG_BASE_DIR}" maxDepth="2">
+                    <IfFileName glob="*/*.log" />
+                    <!--保留天数-->
+                    <IfLastModified age="${RETAIN_DAY}" />
+                </Delete>
+                <Delete basePath="${LOG_BASE_DIR}" maxDepth="1">
+                    <IfLastModified age="${RETAIN_DAY}" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+    </Appenders>
+
+    <!--定义logger，只有定义了logger并引入的appender，appender才会生效-->
+    <Loggers>
+        <logger name="com.zmr.ImportantComponents.Exception" level="INFO" additivity="false">
+            <appender-ref ref="ExceptionLog"/>
+        </logger>
+        <!-- 当Logger在配置文件中声明时，就创建了一个LoggerConfig对象，两者一一对应，LoggerConfig包含一些Filter、这些
+        Filters用于过滤传递给任意Appender的LogEvent，它还包含一些Appender的引用。Logger本身执行无指向的动作，它仅含有一
+        个与LoggerConfig关联的名称（通过name属性指定），root Logger具有固定的默认名称，其他Logger需要指定各自的name属性
+        值。LoggerConfig会被分配一个日志级别，通过level属性来指定。内建的日志级别按优先级从高到底排序有：OFF > FATAL >
+        ERROR > WARN > INFO > DEBUG > TRACE > ALL，Log4j 2 也支持自定义的日志级别。
+        -->
+        <Root level="INFO">
+            <appender-ref ref="ExceptionLog"/>
+        </Root>
+    </Loggers>
+</Configuration>
