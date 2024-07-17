@@ -176,4 +176,11 @@ public interface DoubleUtils {
      * @return boolean 如果v1 大于v2 则 返回true 否则false
      */
     boolean compare(String v1, String v2);
+
+    /**
+     * <p> 检查一个数据是否是 double 类型的 </p>
+     * @param str
+     * @return
+     */
+    boolean isDouble(String str);
 }

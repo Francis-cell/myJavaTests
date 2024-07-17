@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="NettyClientLearningDemos" />
         <module name="NettyServerLearningDemo" />
+        <module name="own-learning" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -25,6 +26,7 @@
       <module name="NettyLearningDemo" options="" />
       <module name="NettyServerLearningDemo" options="-parameters" />
       <module name="myJavaTest" options="" />
+      <module name="own-learning" options="-parameters" />
     </option>
   </component>
 </project>

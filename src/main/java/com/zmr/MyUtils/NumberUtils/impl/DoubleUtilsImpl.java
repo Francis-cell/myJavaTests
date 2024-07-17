@@ -334,4 +334,19 @@ public class DoubleUtilsImpl implements DoubleUtils {
         }
         return res;
     }
+
+    /**
+     * {@inheritDoc}
+     * @param str
+     * @return
+     */
+    @Override
+    public boolean isDouble(String str) {
+        try {
+            Double.parseDouble(str);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
 }

@@ -1,10 +1,15 @@
 package com.zmr.MyUtils.DateUtils.impl;
 
+import com.alibaba.excel.util.StringUtils;
+import com.zmr.ImportantComponents.Exception.BusinessException;
 import com.zmr.MyUtils.DateUtils.DateUtils;
 import org.springframework.stereotype.Component;
 
 import java.sql.Timestamp;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -79,6 +84,77 @@ public class DateUtilsImpl implements DateUtils {
             ans = sdf.format(new Date(((java.sql.Date)date).getTime()));
         }else if(date instanceof Timestamp){
             ans = sdf.format(new Date(((Timestamp)date).getTime()));
+        }
+        return ans;
+    }
+
+
+    /**
+     * {@inheritDoc}
+     * @param dateStr 时间字符串
+     * @param formatStr 格式字符串
+     * @return true - 时间字符串遵从对应的格式； false - 时间字符串不遵循对应的格式；
+     */
+    @Override
+    public boolean checkDateStrWithFormat(String dateStr, String formatStr) {
+        boolean ans = false;
+        if (dateStr == null) {
+            return ans;
+        }
+        if (formatStr == null) {
+            return ans;
+        }
+        SimpleDateFormat sdf = new SimpleDateFormat(formatStr);
+        // 设置为严格模式，不允许日期和时间值存在逻辑上的矛盾
+        sdf.setLenient(false);
+        try {
+            // 尝试解析日期
+            sdf.parse(dateStr);
+            return true;
+        } catch (ParseException e) {
+            return ans;
+        }
+    }
+
+    /**
+     * {@inheritDoc}
+     * @Param formatterPattern 时间格式
+     * @return
+     */
+    @Override
+    public String getFormatCurrentDateStr(String formatterPattern) {
+        // 获取当前日期对象
+        LocalDate currentDate = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(formatterPattern);
+        // 格式化
+        String currentDateStr = currentDate.format(formatter);
+        return currentDateStr;
+    }
+
+    /**
+     * {@inheritDoc}
+     * @param dateVal
+     * @param formatStr
+     * @return
+     */
+    @Override
+    public <T> Date changeDateValToDateFormat(T dateVal, String formatStr) {
+        Date ans = null;
+        if (StringUtils.isEmpty(formatStr)) {
+            throw new BusinessException("要转换的日期格式不能为空！");
+        }
+        SimpleDateFormat sdf = new SimpleDateFormat(formatStr);
+        try {
+            // 尝试解析日期
+            if (dateVal instanceof String) {
+                ans = sdf.parse((String) dateVal);
+            }
+            if (dateVal instanceof Date) {
+                String tmpDateStr = sdf.format((Date) dateVal);
+                ans = sdf.parse(tmpDateStr);
+            }
+        } catch (ParseException e) {
+            ans = null;
         }
         return ans;
     }

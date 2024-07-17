@@ -1,6 +1,7 @@
 package com.zmr.MyUtils.DateUtils;
 
 import java.util.Calendar;
+import java.util.Date;
 
 public interface DateUtils {
     /**
@@ -24,4 +25,27 @@ public interface DateUtils {
      * @param separator 分隔符
      */
     <T> String changeDateFormat(T date, String separator);
+
+    /**
+     * <p> 检查一个时间字符串是否遵循某种时间格式 </p>
+     * @param dateStr 时间字符串
+     * @param formatStr 格式字符串
+     * @return true - 时间字符串遵从对应的格式； false - 时间字符串不遵循对应的格式；
+     */
+    boolean checkDateStrWithFormat(String dateStr, String formatStr);
+
+    /**
+     * <p> 获取当前时间的指定格式字符串 </p>
+     * @param formatterPattern
+     * @return
+     */
+    String getFormatCurrentDateStr(String formatterPattern);
+
+    /**
+     * <p> 将一个日期格式的字符串转换成日期格式 </p>
+     * @param dateStr 日期（支持日期格式的字符串以及本身就是日期的数据）
+     * @param formatStr 日期格式
+     * @return
+     */
+    <T> Date changeDateValToDateFormat(T dateVal, String formatStr);
 }
