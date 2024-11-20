@@ -45,6 +45,6 @@ public class StreamDemo01 {
         //     }
         // });
 
-        PrintUtilsImpl.getInstance().printList(ans);
+        // PrintUtilsImpl.getInstance().printList(ans);
     }
 }

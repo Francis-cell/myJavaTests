@@ -8,13 +8,18 @@ package com.zmr.LearningFiles.BooksReading.EffectiveJavaDemos.Enums;
  **/
 public class Main {
     public static void main(String[] args) {
-        Ensemble solo = Ensemble.SOLO;
-        Ensemble quartet = Ensemble.QUARTET;
+        // Ensemble solo = Ensemble.SOLO;
+        // Ensemble quartet = Ensemble.QUARTET;
+        //
+        // int numOfMusiciansInSolo = solo.numberOfMusicians();
+        // int numOfMusiciansInQuartet = quartet.numberOfMusicians();
+        //
+        // System.out.println("Number of musicians in solo: " + numOfMusiciansInSolo);
+        // System.out.println("Number of musicians in quartet: " + numOfMusiciansInQuartet);
 
-        int numOfMusiciansInSolo = solo.numberOfMusicians();
-        int numOfMusiciansInQuartet = quartet.numberOfMusicians();
-
-        System.out.println("Number of musicians in solo: " + numOfMusiciansInSolo);
-        System.out.println("Number of musicians in quartet: " + numOfMusiciansInQuartet);
+        SipHeadToHeadReason a = SipHeadToHeadReason.GROUP_AFFILIATES;
+        SipHeadToHeadReason b = SipHeadToHeadReason.NOT_DELEGATED;
+        System.out.println(a.getToChiefOrNot());
+        System.out.println(b.getToChiefOrNot());
     }
 }

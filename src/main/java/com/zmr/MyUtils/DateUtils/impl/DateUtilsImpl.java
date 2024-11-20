@@ -143,19 +143,53 @@ public class DateUtilsImpl implements DateUtils {
         if (StringUtils.isEmpty(formatStr)) {
             throw new BusinessException("要转换的日期格式不能为空！");
         }
-        SimpleDateFormat sdf = new SimpleDateFormat(formatStr);
+
+        // 常见的日期格式
+        String[] possibleFormats = {
+                "yyyy-MM-dd HH:mm:ss",
+                "yyyy/MM/dd HH:mm:ss",
+                "yyyy-MM-dd",
+                "yyyy/MM/dd"
+        };
+
         try {
-            // 尝试解析日期
+            // 如果传入的是字符串，尝试多个格式解析
             if (dateVal instanceof String) {
-                ans = sdf.parse((String) dateVal);
+                ans = tryParseDate((String) dateVal, possibleFormats);
             }
-            if (dateVal instanceof Date) {
-                String tmpDateStr = sdf.format((Date) dateVal);
-                ans = sdf.parse(tmpDateStr);
+            // 如果传入的是Date，直接格式化
+            else if (dateVal instanceof Date) {
+                ans = (Date) dateVal;
             }
+
+            // 如果成功解析日期，则按给定的格式转换
+            if (ans != null) {
+                SimpleDateFormat sdf = new SimpleDateFormat(formatStr);
+                String formattedDate = sdf.format(ans);
+                ans = sdf.parse(formattedDate);
+            }
+
         } catch (ParseException e) {
+            e.printStackTrace();
             ans = null;
         }
         return ans;
     }
+
+    /**
+     * <p> 辅助方法，尝试使用多个格式解析字符串 </p>
+     * @param dateStr
+     * @param formats
+     * @return
+     */
+    private static Date tryParseDate(String dateStr, String[] formats) {
+        for (String format : formats) {
+            try {
+                return new SimpleDateFormat(format).parse(dateStr);
+            } catch (ParseException ignored) {
+            }
+        }
+        throw new BusinessException("时间格式转换失败，请检查！当前要进行转换的日期为：" + dateStr);
+    }
+
 }

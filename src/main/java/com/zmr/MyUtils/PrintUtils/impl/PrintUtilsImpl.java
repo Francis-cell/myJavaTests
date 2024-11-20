@@ -23,7 +23,7 @@ public class PrintUtilsImpl implements PrintUtils {
      * @param <E>
      */
     @Override
-    public <E> void printList(List<E> lists) {
+    public <E> void printSampleList(List<E> lists) {
         for (E e : lists) {
             System.out.printf(e + ", ");
         }
@@ -32,15 +32,46 @@ public class PrintUtilsImpl implements PrintUtils {
 
     /**
      * {@inheritDoc}
+     * @param lists
+     * @param <E>
+     */
+    @Override
+    public <E> void printComplicatedList(List<List<E>> lists) {
+        for (int i = 0; i < lists.size(); i++) {
+            System.out.println("{ ");
+            printSampleList(lists.get(i));
+            System.out.println("} ");
+        }
+    }
+
+    /**
+     * {@inheritDoc}
      * @param arr
      */
     @Override
     public <T> void printArr(T[] arr) {
+        assert arr != null;
         for (int i = 0; i < arr.length; i++) {
-            System.out.printf(arr[i] + ", ");
+            System.out.print(("" + arr[i]) + ", ");
         }
         System.out.println();
     }
+
+    /**
+     * {@inheritDoc}
+     * @param arr
+     */
+    public void printArr(int[] arr) {
+        assert arr != null;
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]);
+            if (i < arr.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+    }
+
 
     /**
      * {@inheritDoc}

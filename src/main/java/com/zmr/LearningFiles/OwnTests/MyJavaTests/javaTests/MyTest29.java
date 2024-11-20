@@ -22,10 +22,10 @@ public class MyTest29 {
             mapList.add(map);
         }
 
-        PrintUtilsImpl.getInstance().printList(mapList);
+        // PrintUtilsImpl.getInstance().printList(mapList);
 
         MapUtilsImpl.getInstance().updateMap(mapList, "f", "123", "index", 1);
 
-        PrintUtilsImpl.getInstance().printList(mapList);
+        // PrintUtilsImpl.getInstance().printList(mapList);
     }
 }
