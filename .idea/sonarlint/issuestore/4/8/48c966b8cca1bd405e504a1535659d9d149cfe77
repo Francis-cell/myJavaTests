@@ -1,0 +1,46 @@
+
+k	java:S117'"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«ÅÉüşÿÿÿÿ
+k	java:S117'"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«ÅÉüşÿÿÿÿ
+k	java:S1174"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«â™úÿÿÿÿ
+k	java:S1174"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«â™úÿÿÿÿ
+k	java:S1174"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«â™úÿÿÿÿ
+^
+java:S2184<"CCast one of the operands of this subtraction operation to a "long".(ßú””øÿÿÿÿ
+^
+java:S2184="CCast one of the operands of this subtraction operation to a "long".(Âï‡Áşÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ŞŒÖ‹
+]
+java:S2259”"AA "NullPointerException" could be thrown; "arr" is nullable here.(œÀ’êıÿÿÿÿ
+]
+java:S2259³"AA "NullPointerException" could be thrown; "sum" is nullable here.(“Åˆ¤ùÿÿÿÿ
+V	java:S125n"<This block of commented-out lines of code should be removed.(­ã˜úÿÿÿÿ
+i
+java:S3776™"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(¬Ø½²
+W	java:S125Ÿ"<This block of commented-out lines of code should be removed.(çê²ışÿÿÿÿ
+Q	java:S125¦"<This block of commented-out lines of code should be removed.(ü¬×
+@
+java:S2140É")Use "java.util.Random.nextInt()" instead.(–ä©
+a
+java:S1764Ë"JCorrect one of the identical sub-expressions on both sides of operator "-"(‡‹ÿ¹
+@
+java:S2140Ë")Use "java.util.Random.nextInt()" instead.(‡‹ÿ¹
+@
+java:S2140Ë")Use "java.util.Random.nextInt()" instead.(‡‹ÿ¹
+=
+java:S1168Ó"&Return an empty array instead of null.(¥¹ï
+u
+java:S3012Ø"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(½ÁÜŠüÿÿÿÿ
+R	java:S125ß"<This block of commented-out lines of code should be removed.(Ş É
+T	java:S106ì"9Replace this use of System.out or System.err by a logger.(›°§¤üÿÿÿÿ
+E
+java:S2140ó")Use "java.util.Random.nextInt()" instead.(î”«‡üÿÿÿÿ
+?
+java:S2140ô")Use "java.util.Random.nextInt()" instead.(±øÇ
+T	java:S106ù"9Replace this use of System.out or System.err by a logger.(¶›üÿÿÿÿÿ
+T	java:S106ú"9Replace this use of System.out or System.err by a logger.(ù£·êıÿÿÿÿ
+O	java:S106û"9Replace this use of System.out or System.err by a logger.(ïÍØƒ
+T	java:S106ü"9Replace this use of System.out or System.err by a logger.(ÿÓ‚Ùùÿÿÿÿ
+O	java:S106ı"9Replace this use of System.out or System.err by a logger.(İ¤ü‡
+T	java:S106ş"9Replace this use of System.out or System.err by a logger.(­¸Å¸ıÿÿÿÿ
+T	java:S106ÿ"9Replace this use of System.out or System.err by a logger.(Íˆ¶‚ùÿÿÿÿ
+T	java:S106ƒ"9Replace this use of System.out or System.err by a logger.(·¸êşÿÿÿÿ

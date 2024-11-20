@@ -1,0 +1,18 @@
+
+ƒ
+java:S1319"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(ÉÅ—ò
+ƒ
+java:S1319D"hThe type of "distanceMap" should be an interface such as "Map" rather than the implementation "HashMap".(ª§ÿ™úÿÿÿÿ
+„
+java:S1319D"iThe type of "touchedNodes" should be an interface such as "Set" rather than the implementation "HashSet".(ª§ÿ™úÿÿÿÿ
+ˆ
+java:S1319Y"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(Êç˜úÿÿÿÿÿ
+m
+java:S1104t"PMake node a static final constant or non-public and provide accessors if needed.(Ù‚é÷8íöô™ï0
+o
+java:S1104u"TMake distance a static final constant or non-public and provide accessors if needed.(»‡¼´ÿÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‰†âÇ
+P
+java:S1118":Add a private constructor to hide the implicit public one.(Ó½ùŠ
+U
+java:S6213c":Rename this variable to not match a restricted identifier.(÷êð¤ùÿÿÿÿ

@@ -1,0 +1,8 @@
+
+{
+java:S1319B"`The type of "ans" should be an interface such as "Set" rather than the implementation "HashSet".(¦‹—ıÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(†Æø»ıÿÿÿÿ
+N	java:S106W"9Replace this use of System.out or System.err by a logger.(ìÙÕı
+M	java:S106Y"9Replace this use of System.out or System.err by a logger.(ƒÚáB
+N	java:S106]"9Replace this use of System.out or System.err by a logger.(²ÇÀ¢
+M	java:S106_"9Replace this use of System.out or System.err by a logger.(ƒÚáB

@@ -1,0 +1,16 @@
+
+m	java:S127"XRefactor the code in order to not assign to this loop counter from within the loop body.(Ì‚ˆÌ
+m	java:S127"XRefactor the code in order to not assign to this loop counter from within the loop body.(¯ÀÚè
+m	java:S127"XRefactor the code in order to not assign to this loop counter from within the loop body.(¯ÀÚè
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(°¸öe
+8
+java:S1659L""Declare "slow" on a separate line.(±¨‡â
+9
+java:S2119d"Save and re-use this "Random".(šŸ«íøÿÿÿÿ
+9
+java:S2119x"Save and re-use this "Random".(šŸ«íøÿÿÿÿ
+R	java:S125‹"<This block of commented-out lines of code should be removed.(à¤Õö
+O	java:S106"9Replace this use of System.out or System.err by a logger.(†îèì
+W	java:S125˜"<This block of commented-out lines of code should be removed.(¹Á…ùÿÿÿÿ
+T	java:S106›"9Replace this use of System.out or System.err by a logger.(¶›üÿÿÿÿÿ
+T	java:S106 "9Replace this use of System.out or System.err by a logger.(·¸êşÿÿÿÿ

@@ -1,0 +1,20 @@
+
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(°¸öe
+V
+java:S1126L"AReplace this if-then-else statement by a single return statement.(ÄŠÎ
+D
+java:S2140Z")Use "java.util.Random.nextInt()" instead.(‡Îñ€üÿÿÿÿ
+`
+java:S1764\"JCorrect one of the identical sub-expressions on both sides of operator "-"(½òçÈ
+?
+java:S2140\")Use "java.util.Random.nextInt()" instead.(½òçÈ
+?
+java:S2140\")Use "java.util.Random.nextInt()" instead.(½òçÈ
+<
+java:S1168i"&Return an empty array instead of null.(¥¹ï
+o
+java:S3012n"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(Â¥î¬
+Q	java:S125u"<This block of commented-out lines of code should be removed.(ÊŒ¹×
+S	java:S106~"9Replace this use of System.out or System.err by a logger.(›°§¤üÿÿÿÿ
+T	java:S106†"9Replace this use of System.out or System.err by a logger.(¶›üÿÿÿÿÿ
+T	java:S106‹"9Replace this use of System.out or System.err by a logger.(·¸êŽþÿÿÿÿ

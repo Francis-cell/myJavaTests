@@ -1,0 +1,22 @@
+
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(°¸öe
+X	java:S125"<This block of commented-out lines of code should be removed.( ÁÓ‰8µ³¥Š‰1
+Q	java:S125I"<This block of commented-out lines of code should be removed.(ôïœÄ
+D
+java:S2140V")Use "java.util.Random.nextInt()" instead.(‡Îñ€üÿÿÿÿ
+e
+java:S1764X"JCorrect one of the identical sub-expressions on both sides of operator "-"(‰¼›þÿÿÿÿ
+D
+java:S2140X")Use "java.util.Random.nextInt()" instead.(‰¼›þÿÿÿÿ
+D
+java:S2140X")Use "java.util.Random.nextInt()" instead.(‰¼›þÿÿÿÿ
+<
+java:S1168e"&Return an empty array instead of null.(¥¹ï
+o
+java:S3012j"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(Â¥î¬
+V	java:S125p"<This block of commented-out lines of code should be removed.(ìôš›ÿÿÿÿÿ
+S	java:S106{"9Replace this use of System.out or System.err by a logger.(›°§¤üÿÿÿÿ
+@
+java:S2140€")Use "java.util.Random.nextInt()" instead.(ÌÈ¹Ø
+T	java:S106ƒ"9Replace this use of System.out or System.err by a logger.(¶›üÿÿÿÿÿ
+T	java:S106‡"9Replace this use of System.out or System.err by a logger.(·¸êŽþÿÿÿÿ

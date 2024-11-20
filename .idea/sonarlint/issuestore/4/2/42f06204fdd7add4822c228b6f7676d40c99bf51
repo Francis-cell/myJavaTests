@@ -1,0 +1,18 @@
+
+e	java:S117C"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’Óäl
+m	java:S117g"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚ ¥î8¸Úºõð0
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(—·ï­üÿÿÿÿ
+V	java:S125K"<This block of commented-out lines of code should be removed.(£Ü¾œùÿÿÿÿ
+K
+java:S2140`")Use "java.util.Random.nextInt()" instead.(‰Âßÿÿÿÿÿ8¥Ûºõð0
+Z	java:S106i"9Replace this use of System.out or System.err by a logger.(óÞâÅúÿÿÿÿ8¦Ûºõð0
+K
+java:S2140k")Use "java.util.Random.nextInt()" instead.(Ñ¢ùÿÿÿÿ8¦Ûºõð0
+Z	java:S106q"9Replace this use of System.out or System.err by a logger.(Å­ËÝúÿÿÿÿ8¨Ûºõð0
+U	java:S106r"9Replace this use of System.out or System.err by a logger.(Ï»¢é8¨Ûºõð0
+U	java:S106s"9Replace this use of System.out or System.err by a logger.(õª³à8¨Ûºõð0
+U	java:S106t"9Replace this use of System.out or System.err by a logger.(Š‡Ü€8¨Ûºõð0
+U	java:S106u"9Replace this use of System.out or System.err by a logger.(„½˜Ù8¨Ûºõð0
+Z	java:S106y"9Replace this use of System.out or System.err by a logger.(¨Ö®¨ùÿÿÿÿ8¨Ûºõð0
+q
+java:S1128"TRemove this unused import 'com.google.thirdparty.publicsuffix.PublicSuffixPatterns'.(†Ûã8É¶»õð0

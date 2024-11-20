@@ -1,0 +1,14 @@
+
+l
+java:S1104
+"QMake value a static final constant or non-public and provide accessors if needed.(‚¯¥ùÿÿÿÿ
+f
+java:S1104"PMake left a static final constant or non-public and provide accessors if needed.(ó÷ÔÄ
+g
+java:S1104"QMake right a static final constant or non-public and provide accessors if needed.(Ö¢è¥
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ùÖÎÍûÿÿÿÿ
+U
+java:S1118":Add a private constructor to hide the implicit public one.(ü·ïŠşÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(§Ü»­şÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(äŞöâÿÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(äŞöâÿÿÿÿÿ

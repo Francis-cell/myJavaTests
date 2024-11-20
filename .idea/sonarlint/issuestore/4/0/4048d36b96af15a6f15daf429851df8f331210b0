@@ -1,0 +1,32 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‰†âÇ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(„ÿ¯¨ûÿÿÿÿ
+N
+java:S18546"9Remove this useless assignment to local variable "node7".(îÏæW
+O
+java:S18545"9Remove this useless assignment to local variable "node6".(ÄÄÂ­
+T
+java:S18544"9Remove this useless assignment to local variable "node5".(ô³¯¶ûÿÿÿÿ
+T
+java:S18543"9Remove this useless assignment to local variable "node4".(Ü‰¹Õùÿÿÿÿ
+O
+java:S18542"9Remove this useless assignment to local variable "node3".(î¿¹œ
+N
+java:S18541"9Remove this useless assignment to local variable "node2".(¬³¿S
+O
+java:S18540"9Remove this useless assignment to local variable "node1".(äæð§
+@
+java:S14810"*Remove this unused "node1" local variable.(äæð§
+?
+java:S14811"*Remove this unused "node2" local variable.(¬³¿S
+@
+java:S14812"*Remove this unused "node3" local variable.(î¿¹œ
+E
+java:S14813"*Remove this unused "node4" local variable.(Ü‰¹Õùÿÿÿÿ
+E
+java:S14814"*Remove this unused "node5" local variable.(ô³¯¶ûÿÿÿÿ
+@
+java:S14815"*Remove this unused "node6" local variable.(ÄÄÂ­
+?
+java:S14816"*Remove this unused "node7" local variable.(îÏæW
+S	java:S106G"9Replace this use of System.out or System.err by a logger.(ªÓ¼áþÿÿÿÿ

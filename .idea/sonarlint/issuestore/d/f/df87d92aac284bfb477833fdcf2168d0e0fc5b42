@@ -1,0 +1,12 @@
+
+z
+java:S1319,"dThe type of "rest" should be an interface such as "List" rather than the implementation "ArrayList".(¼¯ş•
+e	java:S1172"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÀÄi
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(†Æø»ıÿÿÿÿ
+M
+java:S1135:"2Complete the task associated to this TODO comment.(ö›èùÿÿÿÿ
+T	java:S106£"9Replace this use of System.out or System.err by a logger.(“Ÿ÷Ÿüÿÿÿÿ
+O	java:S106¦"9Replace this use of System.out or System.err by a logger.(™²“õ
+N	java:S106©"9Replace this use of System.out or System.err by a logger.(âùÏ=
+O	java:S106¬"9Replace this use of System.out or System.err by a logger.(™²“õ
+V	java:S106¯"9Replace this use of System.out or System.err by a logger.(ÎàŸ»8Æüö¢ï0

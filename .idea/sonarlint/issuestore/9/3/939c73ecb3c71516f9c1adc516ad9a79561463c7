@@ -1,0 +1,24 @@
+
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­áƒÀ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­áƒÀ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­áƒÀ
+k	java:S1170"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ™ëîþÿÿÿÿ
+k	java:S1170"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ™ëîþÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÞŒÖ‹
+D
+java:S2140T")Use "java.util.Random.nextInt()" instead.(­Îæ¢øÿÿÿÿ
+e
+java:S1764V"JCorrect one of the identical sub-expressions on both sides of operator "-"(ãÖ˜¦øÿÿÿÿ
+D
+java:S2140V")Use "java.util.Random.nextInt()" instead.(ãÖ˜¦øÿÿÿÿ
+D
+java:S2140V")Use "java.util.Random.nextInt()" instead.(ãÖ˜¦øÿÿÿÿ
+<
+java:S1168^"&Return an empty array instead of null.(¥¹ï
+t
+java:S3012d"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(‡ÆŠ¦øÿÿÿÿ
+N	java:S106m"9Replace this use of System.out or System.err by a logger.(†îèì
+S	java:S106t"9Replace this use of System.out or System.err by a logger.(¶›üÿÿÿÿÿ
+N	java:S106u"9Replace this use of System.out or System.err by a logger.(é€¹Ñ
+S	java:S106v"9Replace this use of System.out or System.err by a logger.(·“¶‡ýÿÿÿÿ
+S	java:S106z"9Replace this use of System.out or System.err by a logger.(·¸êŽþÿÿÿÿ

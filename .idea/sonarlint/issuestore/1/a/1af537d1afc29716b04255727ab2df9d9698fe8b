@@ -1,0 +1,8 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(„Á±
+N	java:S106"9Replace this use of System.out or System.err by a logger.(«â«ã
+^
+java:S1858"H"testA" is already a string, there's no need to call "toString()" on it.(«â«ã
+N	java:S106 "9Replace this use of System.out or System.err by a logger.(ÒÈÕ‹
+V	java:S125"<This block of commented-out lines of code should be removed.(¸©€êøÿÿÿÿ
+V	java:S125!"<This block of commented-out lines of code should be removed.(ğÉ‘¸ûÿÿÿÿ

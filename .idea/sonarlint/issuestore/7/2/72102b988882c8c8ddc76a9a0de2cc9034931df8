@@ -1,4 +1,11 @@
 
+f	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œı³ş
+f	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œı³ş
+[
+java:S2184+"ECast one of the operands of this subtraction operation to a "double".(ë‚·
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(æíÆçıÿÿÿÿ
+Y
+java:S2589q"7Remove this expression which always evaluates to "true"(Äƒ“ÿÿÿÿÿ8×†Ù³ë0
 :
 java:S16592"Declare "j" on a separate line.(á”æåşÿÿÿÿ
 F
@@ -16,10 +23,3 @@ V	java:S106‚"9Replace this use of System.out or System.err by a logger.(Í¸èÅ
 ^	java:S125›"<This block of commented-out lines of code should be removed.(ı×çåûÿÿÿÿ8¥†Ù³ë0
 [	java:S106 "9Replace this use of System.out or System.err by a logger.(¶›üÿÿÿÿÿ8§†Ù³ë0
 [	java:S106¦"9Replace this use of System.out or System.err by a logger.(·¸êşÿÿÿÿ8¨†Ù³ë0
-f	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œı³ş
-f	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œı³ş
-[
-java:S2184+"ECast one of the operands of this subtraction operation to a "double".(ë‚·
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(æíÆçıÿÿÿÿ
-Y
-java:S2589q"7Remove this expression which always evaluates to "true"(Äƒ“ÿÿÿÿÿ8×†Ù³ë0

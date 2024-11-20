@@ -153,12 +153,12 @@
 
 
 
-        <!-- own jars -->
-        <dependency>
-            <groupId>own</groupId>
-            <artifactId>learning</artifactId>
-            <version>algs4</version>
-        </dependency>
+<!--        &lt;!&ndash; own jars &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>own</groupId>-->
+<!--            <artifactId>learning</artifactId>-->
+<!--            <version>algs4</version>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>
