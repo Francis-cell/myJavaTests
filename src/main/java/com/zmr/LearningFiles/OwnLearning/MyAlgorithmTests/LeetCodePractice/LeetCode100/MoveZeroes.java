@@ -1,8 +1,9 @@
 package com.zmr.LearningFiles.OwnLearning.MyAlgorithmTests.LeetCodePractice.LeetCode100;
 
 import com.zmr.MyUtils.PrintUtils.impl.PrintUtilsImpl;
-
-import java.util.ArrayList;
+import com.zmr.MyUtils.TestToolsUtils.DataCompareUtils.DataCompareUtils;
+import com.zmr.MyUtils.TestToolsUtils.DataCopyUtils.DataCopyUtils;
+import com.zmr.MyUtils.TestToolsUtils.GenerateDataUtils.GenerateDataUtils;
 
 /**
  * <p> 移动零 (必须在不复制数组的情况下原地对数组进行操作) </p>
@@ -25,11 +26,11 @@ public class MoveZeroes {
         }
     }
 
-    ///**
+    // /**
     // * <p> 元素交换求解法 </p>
     // * @param nums
     // */
-    //public static void moveZeroesCrudeNew(int[] nums) {
+    // public static void moveZeroesCrudeNew(int[] nums) {
     //    // 0 元素序列之后的第一个不为 0 的元素的下标
     //    int notZeroIndex = 0;
     //    // 当前处理到的为 0 的元素下标
@@ -37,7 +38,7 @@ public class MoveZeroes {
     //    for (int i = 0; i < nums.length ; i++) {
     //        // 找到当前情况下第一个不为 0 的元素和第一个为 0 的元素的下标值
     //        // 如果 nums[zeroIndex] 已经是 0 了则不进行交换
-    //        // zeroIndex == -1 的时候，代表第一次进行赋值
+    //        // zeroIndex == 0 的时候，代表第一次进行赋值
     //        if (nums[i] == 0 && (zeroIndex == 0 || nums[zeroIndex] != 0)) {
     //            zeroIndex = i;
     //        } else {
@@ -51,7 +52,7 @@ public class MoveZeroes {
     //            notZeroIndex = i;
     //        }
     //    }
-    //}
+    // }
 
     /**
      * <p> 交换 nums 数组中的 index1 和 index2 下标的元素值 </p>
@@ -77,16 +78,16 @@ public class MoveZeroes {
      * @param nums
      */
     public static void moveZeroes(int[] nums) {
-        // 定义第一个非 0 的元素的指针的位置
+        // 1、定义第一个非 0 的元素的指针的位置
         int cur = 0;
-        // 开始收集不是 0 的数
+        // 2、开始收集不是 0 的数
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] != 0) {
                 nums[cur++] = nums[i];
             }
         }
 
-        // 将剩余位置的元素赋值为 0
+        // 3、将剩余位置的元素赋值为 0
         for (int i = cur; i < nums.length; i++) {
             nums[i] = 0;
         }
@@ -94,18 +95,46 @@ public class MoveZeroes {
 
 
     public static void main(String[] args) {
-        // 1,3,12,0,0
-        int[] nums1 = new int[] {0,1,0,3,12};
-        // 0
-        int[] nums2 = new int[] {0};
-        // 1,0
-        int[] nums3 = new int[] {1, 0};
-
-        moveZeroes(nums1);
-        PrintUtilsImpl.getInstance().printArr(nums1);
+        // // 1,3,12,0,0
+        // int[] nums1 = new int[] {0,1,0,3,12};
+        // // 0
+        // int[] nums2 = new int[] {0};
+        // // 1,0
+        // int[] nums3 = new int[] {1, 0};
+        //
+        // moveZeroes(nums1);
+        // PrintUtilsImpl.getInstance().printArr(nums1);
         //moveZeroesCrude(nums2);
         //PrintUtilsImpl.getInstance().printArr(nums2);
         //moveZeroesCrude(nums3);
         //PrintUtilsImpl.getInstance().printArr(nums3);
+
+        // 对撞测试
+        int maxSize = 1000;
+        int maxValue = 10000;
+        int testTime = 100000;
+        System.out.println("测试开始！");
+        for (int i = 0; i < testTime; i++) {
+            // 随机数组
+            int[] arr = GenerateDataUtils.generateRandomIntArray(maxSize, maxValue);
+            int[] arrCopy = DataCopyUtils.copyIntArray(arr);
+            int[] arrOrigin = DataCopyUtils.copyIntArray(arr);
+
+            // 暴力解
+            moveZeroesCrude(arr);
+            // 双指针解
+            moveZeroes(arrCopy);
+            if (!DataCompareUtils.isEqualIntArray(arr, arrCopy)) {
+                System.out.println("测试失败！");
+                System.out.println("当前随机数组为：");
+                PrintUtilsImpl.getInstance().printArr(arrOrigin);
+                System.out.println("暴力解 结果：");
+                PrintUtilsImpl.getInstance().printArr(arr);
+                System.out.println("双指针解 结果：");
+                PrintUtilsImpl.getInstance().printArr(arrCopy);
+                return;
+            }
+        }
+        System.out.println("测试完成！");
     }
 }
