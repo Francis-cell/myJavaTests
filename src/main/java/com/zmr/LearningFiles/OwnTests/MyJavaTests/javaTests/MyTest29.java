@@ -1,9 +1,6 @@
 package com.zmr.LearningFiles.OwnTests.MyJavaTests.javaTests;
 
 import com.zmr.MyUtils.MapUtils.MapUtils;
-import com.zmr.MyUtils.MapUtils.impl.MapUtilsImpl;
-import com.zmr.MyUtils.PrintUtils.PrintUtils;
-import com.zmr.MyUtils.PrintUtils.impl.PrintUtilsImpl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -22,10 +19,10 @@ public class MyTest29 {
             mapList.add(map);
         }
 
-        // PrintUtilsImpl.getInstance().printList(mapList);
+        // PrintUtils.printList(mapList);
 
-        MapUtilsImpl.getInstance().updateMap(mapList, "f", "123", "index", 1);
+        MapUtils.updateMap(mapList, "f", "123", "index", 1);
 
-        // PrintUtilsImpl.getInstance().printList(mapList);
+        // PrintUtils.printList(mapList);
     }
 }

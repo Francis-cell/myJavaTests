@@ -1,6 +1,6 @@
 package com.zmr.LearningFiles.OwnLearning.MyAlgorithmTests.LeetCodePractice.LeetCode100;
 
-import com.zmr.MyUtils.PrintUtils.impl.PrintUtilsImpl;
+import com.zmr.MyUtils.PrintUtils.PrintUtils;
 
 import java.util.*;
 
@@ -252,7 +252,7 @@ public class ThreeSum {
         List<List<Integer>> ans1 = threeSumSortWithTwoCurs(nums1);
         // List<List<Integer>> ans2 =threeSumCrude(nums2);
 
-        PrintUtilsImpl.getInstance().printComplicatedList(ans1);
-        // PrintUtilsImpl.getInstance().printComplicatedList(ans2);
+        PrintUtils.printComplicatedList(ans1);
+        // PrintUtils.printComplicatedList(ans2);
     }
 }

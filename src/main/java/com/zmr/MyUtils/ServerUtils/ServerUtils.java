@@ -1,23 +1,42 @@
 package com.zmr.MyUtils.ServerUtils;
 
-import javax.servlet.http.HttpServletRequest;
+import org.springframework.stereotype.Component;
 
-/**
- * <p> 获取应用 ID 和服务器名 </p>
- */
-public interface ServerUtils {
+import javax.servlet.http.HttpServletRequest;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+@Component
+public class ServerUtils {
+
     /**
      * <p> 获取服务名 </p>
      * @return
      */
-    String getServerName();
+    public static String getServerName() {
+        String hostName = "";
+        try {
+            InetAddress address = InetAddress.getLocalHost();
+            hostName = address.getHostName();
+        } catch (UnknownHostException e) {
+            throw new RuntimeException("get server host failed.");
+        }
+        return hostName;
+    }
 
     /**
      * <p> 获取服务全路径 </p>
      * @param request
      * @return
      */
-    String getAllPath(HttpServletRequest request);
+    public static String getAllPath(HttpServletRequest request) {
+        // ip and port information.
+        String ip = request.getServerName();
+        int port = request.getServerPort();
+        // webAppName
+        String webAppName = request.getContextPath();
+        return String.format("%s:%s%s", ip, port, webAppName);
+    }
 
     /**
      * <p> 获取服务 ID 后的最后一段路径 </p>
@@ -25,7 +44,15 @@ public interface ServerUtils {
      * @param request
      * @return
      */
-    String getShortPath(HttpServletRequest request);
+    public static String getShortPath(HttpServletRequest request) {
+        // ip and port information.
+        String ip = request.getServerName();
+        ip = ip.substring(ip.lastIndexOf(".") + 1);
+        int port = request.getServerPort();
+        // webAppName
+        String webAppName = request.getContextPath();
+        return String.format("%s:%s%s", ip, port, webAppName);
+    }
 
     /**
      * <p> 获取到启动参数中 -DappName 的值 </p>
@@ -33,5 +60,11 @@ public interface ServerUtils {
      * <p> 使用 System.getProperty("appName") 获取到对应的值 </p>
      * @return
      */
-    String getAppName();
+    public static String getAppName() {
+        String appName = System.getProperty("appName");
+        if (appName == null || "".equals(appName)) {
+            return getServerName();
+        }
+        return appName;
+    }
 }

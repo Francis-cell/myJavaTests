@@ -1,7 +1,6 @@
 package com.zmr.LearningFiles.OwnTests.MyJavaTests.StreamAbout;
 
-import com.zmr.MyUtils.ArrayUtils.impl.ArrayUtilsImpl;
-import com.zmr.MyUtils.PrintUtils.impl.PrintUtilsImpl;
+import com.zmr.MyUtils.ArrayUtils.ArrayUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +20,7 @@ public class StreamDemo01 {
         List<String> ans = new ArrayList<>();
 
         ans = myList.stream().filter(item -> {
-            if (ArrayUtilsImpl.getInstance().arrContainsElement(arr, item)) {
+            if (ArrayUtils.arrContainsElement(arr, item)) {
                 return true;
             } else {
                 return false;
@@ -45,6 +44,6 @@ public class StreamDemo01 {
         //     }
         // });
 
-        // PrintUtilsImpl.getInstance().printList(ans);
+        // PrintUtils.printList(ans);
     }
 }

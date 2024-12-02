@@ -1,6 +1,6 @@
 package com.zmr.LearningFiles.OwnTests.MyJavaTests.javaTests;
 
-import com.zmr.MyUtils.PrintUtils.impl.PrintUtilsImpl;
+import com.zmr.MyUtils.PrintUtils.PrintUtils;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -15,6 +15,6 @@ public class MyTest30 {
             }
         });
 
-        PrintUtilsImpl.getInstance().printArr(strings);
+        PrintUtils.printArr(strings);
     }
 }

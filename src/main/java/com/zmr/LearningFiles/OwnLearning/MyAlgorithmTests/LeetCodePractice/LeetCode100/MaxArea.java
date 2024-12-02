@@ -1,6 +1,6 @@
 package com.zmr.LearningFiles.OwnLearning.MyAlgorithmTests.LeetCodePractice.LeetCode100;
 
-import com.zmr.MyUtils.PrintUtils.impl.PrintUtilsImpl;
+import com.zmr.MyUtils.PrintUtils.PrintUtils;
 import com.zmr.MyUtils.TestToolsUtils.GenerateDataUtils.GenerateDataUtils;
 import com.zmr.MyUtils.TestToolsUtils.WatchUtils.WatchUtils;
 
@@ -149,7 +149,7 @@ public class MaxArea {
                 if (ans1 != ans2) {
                     System.out.println("测试失败！");
                     System.out.println("当前数组为：");
-                    PrintUtilsImpl.getInstance().printArr(arr);
+                    PrintUtils.printArr(arr);
                     System.out.println("ans1: " + ans1);
                     System.out.println("ans2: " + ans2);
                     return;

@@ -3,11 +3,9 @@ package com.zmr.LearningFiles.OwnLearning.MyAlgorithmTests.LeetCodePractice.Leet
 import com.zmr.MyUtils.TestToolsUtils.DataCompareUtils.DataCompareUtils;
 import com.zmr.MyUtils.TestToolsUtils.DataCopyUtils.DataCopyUtils;
 import com.zmr.MyUtils.TestToolsUtils.GenerateDataUtils.GenerateDataUtils;
-import com.zmr.MyUtils.PrintUtils.impl.PrintUtilsImpl;
+import com.zmr.MyUtils.PrintUtils.PrintUtils;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.Map;
 
 public class NumSum {
@@ -102,13 +100,13 @@ public class NumSum {
             if (!DataCompareUtils.isEqualIntArray(ans1, ans2)) {
                 System.out.println("测试失败，此时的测试数据为：");
                 System.out.println("nums:");
-                PrintUtilsImpl.getInstance().printArr(nums);
+                PrintUtils.printArr(nums);
                 System.out.println("target:" + target);
                 System.out.println("测试对比结果：");
                 System.out.println("arr1: ");
-                PrintUtilsImpl.getInstance().printArr(ans1);
+                PrintUtils.printArr(ans1);
                 System.out.println("arr2: ");
-                PrintUtilsImpl.getInstance().printArr(ans2);
+                PrintUtils.printArr(ans2);
                 return;
             }
         }

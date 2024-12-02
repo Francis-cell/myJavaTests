@@ -1,8 +1,8 @@
 package com.zmr.LearningFiles.OwnTests.MyJavaTests.javaTests;
 
-import com.zmr.MyUtils.PrintUtils.impl.PrintUtilsImpl;
-import com.zmr.MyUtils.SheetOperateUtils.impl.XlsUtilsImpl;
-import com.zmr.MyUtils.SheetOperateUtils.impl.XlsxUtilsImpl;
+import com.zmr.MyUtils.PrintUtils.PrintUtils;
+import com.zmr.MyUtils.SheetOperateUtils.XlsUtils;
+import com.zmr.MyUtils.SheetOperateUtils.XlsxUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -120,11 +120,11 @@ public class MyTest25 {
         // getXlsFileRowAndColumnCount(xlsPath, 0);
         // getXlsxFileRowAndColumnCount(xlsxPath, 0);
 
-        Object[][] valsXls = XlsUtilsImpl.getInstance().readXlsFile(xlsPath);
-        PrintUtilsImpl.getInstance().printArr(valsXls);
+        Object[][] valsXls = XlsUtils.readXlsFile(xlsPath);
+        PrintUtils.printArr(valsXls);
 
-        Object[][] valsXlsx = XlsxUtilsImpl.getInstance().readXlsxFile(xlsxPath);
-        PrintUtilsImpl.getInstance().printArr(valsXlsx);
+        Object[][] valsXlsx = XlsxUtils.readXlsxFile(xlsxPath);
+        PrintUtils.printArr(valsXlsx);
 
         Object[][] vals = {
                 {"姓名", "年龄", "性别"}, // 第一行是标题
@@ -133,7 +133,7 @@ public class MyTest25 {
                 {"王五", 28, "男"}
         };
 
-        XlsUtilsImpl.getInstance().writeDataToAXlsFile(basePath, writeXlsPath, vals);
-        XlsUtilsImpl.getInstance().writeDataToAXlsFile(basePath, writeXlsxPath, vals);
+        XlsUtils.writeDataToAXlsFile(basePath, writeXlsPath, vals);
+        XlsUtils.writeDataToAXlsFile(basePath, writeXlsxPath, vals);
     }
 }

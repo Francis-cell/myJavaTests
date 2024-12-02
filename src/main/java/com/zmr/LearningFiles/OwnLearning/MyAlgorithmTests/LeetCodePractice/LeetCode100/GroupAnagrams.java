@@ -1,6 +1,6 @@
 package com.zmr.LearningFiles.OwnLearning.MyAlgorithmTests.LeetCodePractice.LeetCode100;
 
-import com.zmr.MyUtils.PrintUtils.impl.PrintUtilsImpl;
+import com.zmr.MyUtils.PrintUtils.PrintUtils;
 
 import java.util.*;
 
@@ -67,10 +67,10 @@ public class GroupAnagrams {
         // [["a"]]
         String[] strs3 = new String[] {"a"};
 
-        // PrintUtilsImpl.getInstance().printArr(groupAnagrams(strs1));
+        // PrintUtils.printArr(groupAnagrams(strs1));
 
-        // PrintUtilsImpl.getInstance().printComplicatedList(groupAnagrams(strs1));
-        // PrintUtilsImpl.getInstance().printComplicatedList(groupAnagrams(strs2));
-        PrintUtilsImpl.getInstance().printComplicatedList(groupAnagrams(strs3));
+        // PrintUtilsImpl.printComplicatedList(groupAnagrams(strs1));
+        // PrintUtilsImpl.printComplicatedList(groupAnagrams(strs2));
+        PrintUtils.printComplicatedList(groupAnagrams(strs3));
     }
 }

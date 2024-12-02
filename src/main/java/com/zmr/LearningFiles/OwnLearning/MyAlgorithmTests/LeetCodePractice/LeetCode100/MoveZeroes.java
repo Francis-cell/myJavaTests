@@ -1,6 +1,6 @@
 package com.zmr.LearningFiles.OwnLearning.MyAlgorithmTests.LeetCodePractice.LeetCode100;
 
-import com.zmr.MyUtils.PrintUtils.impl.PrintUtilsImpl;
+import com.zmr.MyUtils.PrintUtils.PrintUtils;
 import com.zmr.MyUtils.TestToolsUtils.DataCompareUtils.DataCompareUtils;
 import com.zmr.MyUtils.TestToolsUtils.DataCopyUtils.DataCopyUtils;
 import com.zmr.MyUtils.TestToolsUtils.GenerateDataUtils.GenerateDataUtils;
@@ -103,11 +103,11 @@ public class MoveZeroes {
         // int[] nums3 = new int[] {1, 0};
         //
         // moveZeroes(nums1);
-        // PrintUtilsImpl.getInstance().printArr(nums1);
+        // PrintUtils.printArr(nums1);
         //moveZeroesCrude(nums2);
-        //PrintUtilsImpl.getInstance().printArr(nums2);
+        //PrintUtils.printArr(nums2);
         //moveZeroesCrude(nums3);
-        //PrintUtilsImpl.getInstance().printArr(nums3);
+        //PrintUtils.printArr(nums3);
 
         // 对撞测试
         int maxSize = 1000;
@@ -127,11 +127,11 @@ public class MoveZeroes {
             if (!DataCompareUtils.isEqualIntArray(arr, arrCopy)) {
                 System.out.println("测试失败！");
                 System.out.println("当前随机数组为：");
-                PrintUtilsImpl.getInstance().printArr(arrOrigin);
+                PrintUtils.printArr(arrOrigin);
                 System.out.println("暴力解 结果：");
-                PrintUtilsImpl.getInstance().printArr(arr);
+                PrintUtils.printArr(arr);
                 System.out.println("双指针解 结果：");
-                PrintUtilsImpl.getInstance().printArr(arrCopy);
+                PrintUtils.printArr(arrCopy);
                 return;
             }
         }
