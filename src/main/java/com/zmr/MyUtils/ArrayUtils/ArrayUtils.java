@@ -80,6 +80,8 @@ public class ArrayUtils {
      * @param oldArr 待比较的数组1
      * @param newArr 待比较的数组2
      * @return 差值列表
+     * - 第一个返回值：只在oldArr中存在，不在newArr中存在的元素(删除的元素)
+     * - 第二个返回值：只在newArr中存在，不在oldArr中存在的元素(新增的元素)
      * @param <T>
      */
     public static <T extends Comparable<T>> List<T[]> getDifferentElementsFromTwoArray(T[] oldArr , T[] newArr) {
@@ -131,30 +133,15 @@ public class ArrayUtils {
         }
     }
 
-    /**
-     * 检查两个数组中的元素是否相等
-     * @param v1
-     * @param v2
-     * @return
-     * @param <T>
-     */
+    // /**
+    //  * 检查两个数组中的元素是否相等
+    //  * @param v1
+    //  * @param v2
+    //  * @return
+    //  * @param <T>
+    //  */
     // public <T> Boolean checkTwoValueEquals(T[] v1, T[] v2) {
     //
     // }
 
-    // public static class ComparatorArrayInner<T> implements Comparable<T> {
-    //     @Override
-    //     public int compare(T e1, T e2) {
-    //         // Character 类型
-    //         if (e1 instanceof Character) {
-    //             return (Character) e1 - (Character) e2;
-    //         }
-    //         // String 类型
-    //         if (e1 instanceof String) {
-    //             // return (String) e1 - (String) e2;
-    //             return 0;
-    //         }
-    //         return 0;
-    //     }
-    // }
 }

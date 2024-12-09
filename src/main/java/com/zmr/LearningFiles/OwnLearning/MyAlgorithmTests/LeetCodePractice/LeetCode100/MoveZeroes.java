@@ -1,7 +1,7 @@
 package com.zmr.LearningFiles.OwnLearning.MyAlgorithmTests.LeetCodePractice.LeetCode100;
 
 import com.zmr.MyUtils.PrintUtils.PrintUtils;
-import com.zmr.MyUtils.TestToolsUtils.DataCompareUtils.DataCompareUtils;
+import com.zmr.MyUtils.DataCompareUtils.DataCompareUtils;
 import com.zmr.MyUtils.TestToolsUtils.DataCopyUtils.DataCopyUtils;
 import com.zmr.MyUtils.TestToolsUtils.GenerateDataUtils.GenerateDataUtils;
 

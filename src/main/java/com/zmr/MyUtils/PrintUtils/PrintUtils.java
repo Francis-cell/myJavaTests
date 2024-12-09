@@ -22,8 +22,11 @@ public class PrintUtils {
      * @param <E>
      */
     public static <E> void printSampleList(List<E> lists) {
-        for (E e : lists) {
-            System.out.printf(e + ", ");
+        for (int i = 0; i < lists.size(); i++) {
+            System.out.printf("" + lists.get(i));
+            if (i < lists.size() - 1) {
+                System.out.print(", ");
+            }
         }
         System.out.println();
     }
@@ -35,9 +38,10 @@ public class PrintUtils {
      */
     public static <E> void printComplicatedList(List<List<E>> lists) {
         for (int i = 0; i < lists.size(); i++) {
-            System.out.println("{ ");
+            System.out.print("{ ");
             printSampleList(lists.get(i));
-            System.out.println("} ");
+            System.out.print("} ");
+            System.out.println();
         }
     }
 
@@ -48,7 +52,10 @@ public class PrintUtils {
     public static <T> void printArr(T[] arr) {
         assert arr != null;
         for (int i = 0; i < arr.length; i++) {
-            System.out.print(("" + arr[i]) + ", ");
+            System.out.print("" + arr[i]);
+            if (i < arr.length - 1) {
+                System.out.print(", ");
+            }
         }
         System.out.println();
     }
