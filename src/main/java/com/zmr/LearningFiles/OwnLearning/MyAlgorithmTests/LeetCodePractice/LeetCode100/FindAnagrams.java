@@ -1,10 +1,9 @@
 package com.zmr.LearningFiles.OwnLearning.MyAlgorithmTests.LeetCodePractice.LeetCode100;
 
-import com.zmr.MyUtils.ArrayUtils.ArrayUtils;
-import com.zmr.MyUtils.ComparatorUtils.ComparatorUtils;
-import com.zmr.MyUtils.ListUtils.ListUtils;
-import com.zmr.MyUtils.PrintUtils.PrintUtils;
-import com.zmr.MyUtils.TestToolsUtils.GenerateDataUtils.GenerateDataUtils;
+import com.zmr.MyUtils.DataStructUtils.ArrayUtils.ArrayUtils;
+import com.zmr.MyUtils.TestTools.CompareUtils.ComparatorUtils.ComparatorUtils;
+import com.zmr.MyUtils.DataStructUtils.ListUtils.ListUtils;
+import com.zmr.MyUtils.TestTools.GenerateDataUtils.GenerateDataUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -146,6 +145,7 @@ public class FindAnagrams {
         // PrintUtils.printSampleList(ans3);
         // PrintUtils.printSampleList(ans4);
 
+
         int maxLength = 1000;
         int pMaxLength = 100;
         int testTimes = 10000;
@@ -156,7 +156,7 @@ public class FindAnagrams {
             String pStr = GenerateDataUtils.generateRandomString(pMaxLength, "lower");
 
             List<Integer> ans1 = findAnagramsCrude(str, pStr);
-            List<Integer> ans2 = findAnagramsCrude(str, pStr);
+            List<Integer> ans2 = findAnagrams(str, pStr);
 
             if (!ListUtils.isEqualListWithSort(ans1, ans2)) {
                 System.out.println("测试错误！");

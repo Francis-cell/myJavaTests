@@ -1,6 +1,6 @@
 package com.zmr.LearningFiles.OwnLearning.MyAlgorithmTests.LeetCodePractice.LeetCode100;
 
-import com.zmr.MyUtils.PrintUtils.PrintUtils;
+import com.zmr.MyUtils.TestTools.PrintUtils.PrintUtils;
 
 import java.util.*;
 

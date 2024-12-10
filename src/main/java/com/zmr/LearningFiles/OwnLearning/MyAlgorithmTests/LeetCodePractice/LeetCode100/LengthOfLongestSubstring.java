@@ -1,6 +1,6 @@
 package com.zmr.LearningFiles.OwnLearning.MyAlgorithmTests.LeetCodePractice.LeetCode100;
 
-import com.zmr.MyUtils.TestToolsUtils.GenerateDataUtils.GenerateDataUtils;
+import com.zmr.MyUtils.TestTools.GenerateDataUtils.GenerateDataUtils;
 
 import java.util.HashMap;
 import java.util.HashSet;

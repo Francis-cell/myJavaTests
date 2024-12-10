@@ -1,6 +1,6 @@
 package com.zmr.LearningFiles.OwnTests.MyJavaTests.javaTests;
 
-import com.zmr.MyUtils.MapUtils.MapUtils;
+import com.zmr.MyUtils.DataStructUtils.MapUtils.MapUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,6 +1,6 @@
 package com.zmr.LearningFiles.OwnTests.MyJavaTests.StreamAbout;
 
-import com.zmr.MyUtils.ArrayUtils.ArrayUtils;
+import com.zmr.MyUtils.DataStructUtils.ArrayUtils.ArrayUtils;
 
 import java.util.ArrayList;
 import java.util.List;

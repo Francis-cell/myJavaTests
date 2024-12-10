@@ -1,11 +1,8 @@
 
 package com.zmr.LearningFiles.OwnTests.MyJavaTests.javaTests;
 
-import com.zmr.MyUtils.PrintUtils.PrintUtils;
+import com.zmr.MyUtils.TestTools.PrintUtils.PrintUtils;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;

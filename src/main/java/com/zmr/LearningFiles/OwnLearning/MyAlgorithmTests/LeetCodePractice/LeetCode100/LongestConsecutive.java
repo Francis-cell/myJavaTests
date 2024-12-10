@@ -1,9 +1,9 @@
 package com.zmr.LearningFiles.OwnLearning.MyAlgorithmTests.LeetCodePractice.LeetCode100;
 
-import com.zmr.MyUtils.PrintUtils.PrintUtils;
-import com.zmr.MyUtils.TestToolsUtils.DataCopyUtils.DataCopyUtils;
-import com.zmr.MyUtils.TestToolsUtils.GenerateDataUtils.GenerateDataUtils;
-import com.zmr.MyUtils.TestToolsUtils.WatchUtils.WatchUtils;
+import com.zmr.MyUtils.TestTools.PrintUtils.PrintUtils;
+import com.zmr.MyUtils.TestTools.DataCopyUtils.DataCopyUtils;
+import com.zmr.MyUtils.TestTools.GenerateDataUtils.GenerateDataUtils;
+import com.zmr.MyUtils.TestTools.WatchUtils.WatchUtils;
 
 import java.util.Arrays;
 import java.util.HashSet;

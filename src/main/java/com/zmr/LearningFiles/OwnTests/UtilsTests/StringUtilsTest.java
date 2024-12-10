@@ -1,6 +1,6 @@
 package com.zmr.LearningFiles.OwnTests.UtilsTests;
 
-import com.zmr.MyUtils.StringUtils.StringUtils;
+import com.zmr.MyUtils.DataStructUtils.StringUtils.StringUtils;
 
 public class StringUtilsTest {
     public static void main(String[] args) {

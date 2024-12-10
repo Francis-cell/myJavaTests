@@ -1,9 +1,9 @@
 package com.zmr.LearningFiles.OwnLearning.MyAlgorithmTests.LeetCodePractice.LeetCode100;
 
-import com.zmr.MyUtils.DataCompareUtils.DataCompareUtils;
-import com.zmr.MyUtils.TestToolsUtils.DataCopyUtils.DataCopyUtils;
-import com.zmr.MyUtils.TestToolsUtils.GenerateDataUtils.GenerateDataUtils;
-import com.zmr.MyUtils.PrintUtils.PrintUtils;
+import com.zmr.MyUtils.DataStructUtils.ArrayUtils.ArrayUtils;
+import com.zmr.MyUtils.TestTools.DataCopyUtils.DataCopyUtils;
+import com.zmr.MyUtils.TestTools.GenerateDataUtils.GenerateDataUtils;
+import com.zmr.MyUtils.TestTools.PrintUtils.PrintUtils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -97,7 +97,7 @@ public class NumSum {
             int[] ans1 = twoSumCrude(nums, target);
             int[] ans2 = twoSumWithHashTable(numsCopy, target);
 
-            if (!DataCompareUtils.isEqualIntArray(ans1, ans2)) {
+            if (!ArrayUtils.isEqualIntArray(ans1, ans2)) {
                 System.out.println("测试失败，此时的测试数据为：");
                 System.out.println("nums:");
                 PrintUtils.printArr(nums);

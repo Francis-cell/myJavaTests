@@ -1,7 +1,7 @@
 package com.zmr.LearningFiles.OwnTests.UtilsTests;
 
-import com.zmr.MyUtils.ArrayUtils.ArrayUtils;
-import com.zmr.MyUtils.PrintUtils.PrintUtils;
+import com.zmr.MyUtils.DataStructUtils.ArrayUtils.ArrayUtils;
+import com.zmr.MyUtils.TestTools.PrintUtils.PrintUtils;
 
 import java.util.List;
 

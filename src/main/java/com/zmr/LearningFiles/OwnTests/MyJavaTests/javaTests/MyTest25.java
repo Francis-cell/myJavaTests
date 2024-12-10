@@ -1,8 +1,8 @@
 package com.zmr.LearningFiles.OwnTests.MyJavaTests.javaTests;
 
-import com.zmr.MyUtils.PrintUtils.PrintUtils;
-import com.zmr.MyUtils.SheetOperateUtils.XlsUtils;
-import com.zmr.MyUtils.SheetOperateUtils.XlsxUtils;
+import com.zmr.MyUtils.TestTools.PrintUtils.PrintUtils;
+import com.zmr.MyUtils.OtherUtils.SheetOperateUtils.XlsUtils;
+import com.zmr.MyUtils.OtherUtils.SheetOperateUtils.XlsxUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;

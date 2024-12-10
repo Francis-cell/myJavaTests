@@ -1,9 +1,9 @@
 package com.zmr.LearningFiles.OwnLearning.MyAlgorithmTests.LeetCodePractice.LeetCode100;
 
-import com.zmr.MyUtils.PrintUtils.PrintUtils;
-import com.zmr.MyUtils.DataCompareUtils.DataCompareUtils;
-import com.zmr.MyUtils.TestToolsUtils.DataCopyUtils.DataCopyUtils;
-import com.zmr.MyUtils.TestToolsUtils.GenerateDataUtils.GenerateDataUtils;
+import com.zmr.MyUtils.DataStructUtils.ArrayUtils.ArrayUtils;
+import com.zmr.MyUtils.TestTools.PrintUtils.PrintUtils;
+import com.zmr.MyUtils.TestTools.DataCopyUtils.DataCopyUtils;
+import com.zmr.MyUtils.TestTools.GenerateDataUtils.GenerateDataUtils;
 
 /**
  * <p> 移动零 (必须在不复制数组的情况下原地对数组进行操作) </p>
@@ -124,7 +124,7 @@ public class MoveZeroes {
             moveZeroesCrude(arr);
             // 双指针解
             moveZeroes(arrCopy);
-            if (!DataCompareUtils.isEqualIntArray(arr, arrCopy)) {
+            if (!ArrayUtils.isEqualIntArray(arr, arrCopy)) {
                 System.out.println("测试失败！");
                 System.out.println("当前随机数组为：");
                 PrintUtils.printArr(arrOrigin);

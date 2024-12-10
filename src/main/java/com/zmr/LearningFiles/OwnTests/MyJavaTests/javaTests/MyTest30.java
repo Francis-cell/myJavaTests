@@ -1,6 +1,6 @@
 package com.zmr.LearningFiles.OwnTests.MyJavaTests.javaTests;
 
-import com.zmr.MyUtils.PrintUtils.PrintUtils;
+import com.zmr.MyUtils.TestTools.PrintUtils.PrintUtils;
 
 import java.util.Arrays;
 import java.util.Comparator;
