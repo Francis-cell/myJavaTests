@@ -4,6 +4,7 @@ import com.zmr.MyUtils.DataStructUtils.ArrayUtils.ArrayUtils;
 import com.zmr.MyUtils.TestTools.CompareUtils.ComparatorUtils.ComparatorUtils;
 import com.zmr.MyUtils.DataStructUtils.ListUtils.ListUtils;
 import com.zmr.MyUtils.TestTools.GenerateDataUtils.GenerateDataUtils;
+import com.zmr.MyUtils.TestTools.PrintUtils.PrintUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -56,7 +57,7 @@ public class FindAnagrams {
      * @param p
      * @return
      */
-    public static List<Integer> findAnagrams(String s, String p) {
+    public static List<Integer> findAnagramsWindow(String s, String p) {
         List<Integer> ans = new ArrayList<>();
         if (s == null || p == null || "".equals(s) || "".equals(p)) {
             return ans;
@@ -77,6 +78,61 @@ public class FindAnagrams {
         return ans;
     }
 
+
+    /**
+     * <p> 滑动窗口 + 数组 </p>
+     * <p> 伪代码： </p>
+     * <pre>
+     *      1、声明长度为 26 的数组，用于记录 26 个字母出现的频次;
+     *      2、记录 p (pArr) 和 s (sArr) 出现的字符频次；
+     *      3、比较频次是否相等，相等则证明异构（异构比较的区别）
+     *      4、s 左侧元素向右移动一位，sArr 中对应数组元素计数 - 1； s 右侧元素向右一侧一位，sArr 中对应数组元素计数 + 1；
+     * </pre>
+     * @param s
+     * @param p
+     * @return
+     */
+    public static List<Integer> findAnagramsWindowWithArray(String s, String p) {
+        List<Integer> ans = new ArrayList<>();
+        // 获取 s 和 p 的长度
+        if (s == null && p != null || s != null && p == null) {
+            return ans;
+        }
+
+        int lenS = s.length(), lenP = p.length();
+        if (lenS < lenP) {
+            return ans;
+        }
+
+        // 声明 26 位的 Char 元素桶
+        int[] sCount = new int[26];
+        int[] pCount = new int[26];
+
+        // 这里相当于从字符串 s 上准备了一个初始的虫豸，长度等于 lenP
+        for (int i = 0; i < lenP; i++) {
+            pCount[p.charAt(i) - 'a']++;
+            sCount[s.charAt(i) - 'a']++;
+        }
+
+        // 代表初始的虫豸字符串和 p 字符串互为异构字符串
+        if (Arrays.equals(sCount, pCount)) {
+            ans.add(0);
+        }
+
+        // 虫豸向右爬动，即将 sCount 中左侧元素数量 - 1，右侧元素数量 + 1
+        for (int i = lenP; i < lenS; i++) {
+            // 虫豸左侧向右爬动一位
+            sCount[s.charAt(i - lenP) - 'a']--;
+            // 虫豸右侧向右爬动一位
+            sCount[s.charAt(i) - 'a']++;
+
+            if (Arrays.equals(sCount, pCount)) {
+                ans.add(i - lenP + 1);
+            }
+        }
+
+        return ans;
+    }
 
     /**
      * <p> 检查两个字符串是否是异构的 </p>
@@ -134,16 +190,20 @@ public class FindAnagrams {
         // // [0,1,2]
         // String s2 = "abab";
         // String p2 = "ab";
-        //
         // List<Integer> ans1 = findAnagramsCrude(s1, p1);
         // List<Integer> ans2 = findAnagramsCrude(s2, p2);
         // PrintUtils.printSampleList(ans1);
         // PrintUtils.printSampleList(ans2);
         //
-        // List<Integer> ans3 = findAnagrams(s1, p1);
-        // List<Integer> ans4 = findAnagrams(s2, p2);
+        // List<Integer> ans3 = findAnagramsWindow(s1, p1);
+        // List<Integer> ans4 = findAnagramsWindow(s2, p2);
         // PrintUtils.printSampleList(ans3);
         // PrintUtils.printSampleList(ans4);
+        //
+        // List<Integer> ans5 = findAnagramsWindowWithArray(s1, p1);
+        // List<Integer> ans6 = findAnagramsWindowWithArray(s2, p2);
+        // PrintUtils.printSampleList(ans5);
+        // PrintUtils.printSampleList(ans6);
 
 
         int maxLength = 1000;
@@ -156,7 +216,8 @@ public class FindAnagrams {
             String pStr = GenerateDataUtils.generateRandomString(pMaxLength, "lower");
 
             List<Integer> ans1 = findAnagramsCrude(str, pStr);
-            List<Integer> ans2 = findAnagrams(str, pStr);
+            // List<Integer> ans2 = findAnagramsWindow(str, pStr);
+            List<Integer> ans2 = findAnagramsWindowWithArray(str, pStr);
 
             if (!ListUtils.isEqualListWithSort(ans1, ans2)) {
                 System.out.println("测试错误！");

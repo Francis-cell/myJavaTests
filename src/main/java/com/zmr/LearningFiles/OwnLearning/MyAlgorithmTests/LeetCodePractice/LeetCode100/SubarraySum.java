@@ -10,7 +10,7 @@ package com.zmr.LearningFiles.OwnLearning.MyAlgorithmTests.LeetCodePractice.Leet
  */
 public class SubarraySum {
     /**
-     * <p> 暴力解 </p>
+     * <p> 暴力解 (双指针解) </p>
      * @param nums
      * @param k
      * @return
@@ -35,12 +35,12 @@ public class SubarraySum {
     }
 
     /**
-     *
+     * <p> 双指针解 </p>
      * @param nums
      * @param k
      * @return
      */
-    public int subarraySum(int[] nums, int k) {
+    public int subarraySumWithTwoCurs(int[] nums, int k) {
         return 1;
     }
 
