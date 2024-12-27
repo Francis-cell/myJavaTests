@@ -3,7 +3,6 @@ package com.zmr.MyUtils.DataStructUtils.MapUtils;
 import com.alibaba.excel.util.StringUtils;
 import com.zmr.ImportantComponents.Exception.BusinessException;
 import com.zmr.MyUtils.TestTools.CompareUtils.CompareUtils;
-import org.springframework.stereotype.Component;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -12,8 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@Component
-public class MapUtils {
+public final class MapUtils {
     private static final MapUtils INSTANCE  = new MapUtils();
 
     private MapUtils() {}

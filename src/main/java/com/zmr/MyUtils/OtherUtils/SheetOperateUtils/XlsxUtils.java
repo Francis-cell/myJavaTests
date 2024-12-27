@@ -2,15 +2,13 @@ package com.zmr.MyUtils.OtherUtils.SheetOperateUtils;
 
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.springframework.stereotype.Component;
 
 import java.io.*;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-@Component
-public class XlsxUtils {
+public final class XlsxUtils {
     private static final XlsxUtils INSTANCE = new XlsxUtils();
 
     private XlsxUtils() {}

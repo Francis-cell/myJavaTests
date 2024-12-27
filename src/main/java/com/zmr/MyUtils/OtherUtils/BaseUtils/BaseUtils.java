@@ -1,11 +1,8 @@
 package com.zmr.MyUtils.OtherUtils.BaseUtils;
 
-import org.springframework.stereotype.Component;
-
 import java.util.HashMap;
 
-@Component
-public class BaseUtils {
+public final class BaseUtils {
     /** 默认十进制转换二进制时小数位保留的最大位数 */
     private static final int DIGIT = 5;
 

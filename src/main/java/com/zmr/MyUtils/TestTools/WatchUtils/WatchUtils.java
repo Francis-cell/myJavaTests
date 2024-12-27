@@ -3,7 +3,7 @@ package com.zmr.MyUtils.TestTools.WatchUtils;
 /**
  * <p> 监测一段代码的执行时间长短 </p>
  */
-public class WatchUtils {
+public final class WatchUtils {
     /**
      * 计算并打印执行Runnable的时间（毫秒）。
      *

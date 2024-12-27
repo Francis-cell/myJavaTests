@@ -1,11 +1,8 @@
 package com.zmr.MyUtils.DataStructUtils.NumberUtils;
 
-import org.springframework.stereotype.Component;
-
 import java.math.BigDecimal;
 
-@Component
-public class NumberCompareUtils {
+public final class NumberCompareUtils {
     private static final NumberCompareUtils INSTANCE = new NumberCompareUtils();
 
     private NumberCompareUtils() {}

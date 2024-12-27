@@ -3,7 +3,7 @@ package com.zmr.MyUtils.TestTools.DataCopyUtils;
 /**
  * <p> 数据拷贝方法 </p>
  */
-public class DataCopyUtils {
+public final class DataCopyUtils {
     /**
      * 整形数组拷贝
      * @param arr

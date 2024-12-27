@@ -4,7 +4,7 @@ import javax.annotation.concurrent.GuardedBy;
 import javax.annotation.concurrent.ThreadSafe;
 import java.util.HashSet;
 import java.util.Set;
-import com.zmr.LearningFiles.OwnLearning.BasicJava.genericsTest.entity.Person;
+import com.zmr.LearningFiles.OwnLearning.BasicJava.genericsTests.genericsTest.entity.Person;
 
 
 /**

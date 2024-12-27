@@ -1,11 +1,8 @@
 package com.zmr.MyUtils.TestTools.CompareUtils;
 
-import org.springframework.stereotype.Component;
-
 import java.util.Date;
 
-@Component
-public class CompareUtils {
+public final class CompareUtils {
     private static final CompareUtils INSTANCE  = new CompareUtils();
 
     private CompareUtils() {}

@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * <p> 数据初始化方法 </p>
  */
-public class GenerateDataUtils {
+public final class GenerateDataUtils {
     private static final String LOWER_CASE_LETTERS = "abcdefghijklmnopqrstuvwxyz";
     private static final String UPPER_CASE_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private static final String ALL_CASE_LETTERS = LOWER_CASE_LETTERS + UPPER_CASE_LETTERS;

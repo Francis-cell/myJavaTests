@@ -2,7 +2,6 @@ package com.zmr.MyUtils.DataStructUtils.DateUtils;
 
 import com.alibaba.excel.util.StringUtils;
 import com.zmr.ImportantComponents.Exception.BusinessException;
-import org.springframework.stereotype.Component;
 
 import java.sql.Timestamp;
 import java.text.ParseException;
@@ -12,8 +11,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 
-@Component
-public class DateUtils {
+
+public final class DateUtils {
     private static final DateUtils INSTANCE  = new DateUtils();
 
     private DateUtils() {}

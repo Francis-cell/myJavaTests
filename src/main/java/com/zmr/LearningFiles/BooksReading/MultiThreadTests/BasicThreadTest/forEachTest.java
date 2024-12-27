@@ -1,6 +1,6 @@
 package com.zmr.LearningFiles.BooksReading.MultiThreadTests.BasicThreadTest;
 
-import com.zmr.LearningFiles.OwnLearning.BasicJava.genericsTest.entity.Person;
+import com.zmr.LearningFiles.OwnLearning.BasicJava.genericsTests.genericsTest.entity.Person;
 
 import java.util.ArrayList;
 import java.util.Collections;

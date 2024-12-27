@@ -10,7 +10,7 @@ import static com.zmr.MyUtils.TestTools.CompareUtils.CompareUtils.checkTwoValueE
 /**
  * <p> List 工具类 </p>
  */
-public class ListUtils {
+public final class ListUtils {
     /**
      * <p> List 元素比较器（元素不进行排序的比较） </p>
      * <p> 使用案例： </p>

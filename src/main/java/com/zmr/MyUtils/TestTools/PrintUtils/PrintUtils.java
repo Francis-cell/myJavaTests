@@ -1,13 +1,10 @@
 package com.zmr.MyUtils.TestTools.PrintUtils;
 
-import org.springframework.stereotype.Component;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-@Component
-public class PrintUtils {
+public final class PrintUtils {
     private static final PrintUtils INSTANCE  = new PrintUtils();
 
     private PrintUtils() {}

@@ -1,15 +1,12 @@
 package com.zmr.MyUtils.DataStructUtils.ArrayUtils;
 
 import com.zmr.MyUtils.DataStructUtils.StringUtils.StringUtils;
-import org.springframework.stereotype.Component;
-
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@Component
-public class ArrayUtils {
+public final class ArrayUtils {
     private static final ArrayUtils INSTANCE  = new ArrayUtils();
 
     private ArrayUtils() {}

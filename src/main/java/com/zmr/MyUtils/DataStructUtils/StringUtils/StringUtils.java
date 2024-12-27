@@ -1,10 +1,8 @@
 package com.zmr.MyUtils.DataStructUtils.StringUtils;
-import org.springframework.stereotype.Component;
 
 import java.util.regex.Pattern;
 
-@Component
-public class StringUtils {
+public final class StringUtils {
     private static final StringUtils INSTANCE  = new StringUtils();
 
     // 默认使用的分隔符字符串

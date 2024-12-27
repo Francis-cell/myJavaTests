@@ -1,13 +1,10 @@
 package com.zmr.MyUtils.OtherUtils.ServerUtils;
 
-import org.springframework.stereotype.Component;
-
 import javax.servlet.http.HttpServletRequest;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-@Component
-public class ServerUtils {
+public final class ServerUtils {
 
     /**
      * <p> 获取服务名 </p>
